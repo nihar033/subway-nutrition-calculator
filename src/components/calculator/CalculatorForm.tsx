@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -10,11 +9,11 @@ import {
   BookOpen,
   Utensils,
   Ruler,
-  Bread,
+  PanelTop,
   Beef,
-  Cheese,
+  Pizza,
   Carrot,
-  Drop,
+  Droplets,
   Cookie
 } from 'lucide-react';
 import { CalculatorSelection, MealType, SandwichSize, NutritionTotals } from '@/types/nutrition';
@@ -55,18 +54,17 @@ const CalculatorForm = () => {
 
   const steps = [
     { id: 1, name: 'Meal Type', icon: <Utensils className="w-5 h-5" /> },
-    { id: 2, name: 'Bread', icon: <Bread className="w-5 h-5" /> },
+    { id: 2, name: 'Bread', icon: <PanelTop className="w-5 h-5" /> },
     { id: 3, name: 'Protein', icon: <Beef className="w-5 h-5" /> },
-    { id: 4, name: 'Cheese', icon: <Cheese className="w-5 h-5" /> },
+    { id: 4, name: 'Cheese', icon: <Pizza className="w-5 h-5" /> },
     { id: 5, name: 'Vegetables', icon: <Carrot className="w-5 h-5" /> },
-    { id: 6, name: 'Sauces', icon: <Drop className="w-5 h-5" /> },
+    { id: 6, name: 'Sauces', icon: <Droplets className="w-5 h-5" /> },
     { id: 7, name: 'Sides', icon: <Cookie className="w-5 h-5" /> },
     { id: 8, name: 'Summary', icon: <BookOpen className="w-5 h-5" /> },
   ];
 
   const handleMealTypeChange = (mealType: MealType) => {
     setSelection(prev => ({ ...prev, mealType }));
-    // Reset bread if switching to salad
     if (mealType === 'salad') {
       setSelection(prev => ({ ...prev, bread: null }));
     }
@@ -81,7 +79,6 @@ const CalculatorForm = () => {
     setNutritionTotals(totals);
   };
 
-  // Update nutrition when selection changes
   React.useEffect(() => {
     updateNutrition();
   }, [selection]);
@@ -101,7 +98,6 @@ const CalculatorForm = () => {
   return (
     <Card className="calculator-box w-full max-w-4xl mx-auto">
       <div className="relative">
-        {/* Progress Indicator */}
         <div className="hidden md:flex items-center justify-between mb-8 px-2">
           {steps.map((step) => (
             <div key={step.id} className="flex flex-col items-center">
@@ -125,7 +121,6 @@ const CalculatorForm = () => {
           ))}
         </div>
 
-        {/* Mobile Step Indicator */}
         <div className="flex md:hidden items-center justify-between mb-6">
           <div className="w-full">
             <div className="flex justify-between items-center">
@@ -148,7 +143,6 @@ const CalculatorForm = () => {
           </div>
         </div>
 
-        {/* Step 1: Meal Type and Size */}
         {currentStep === 1 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Select Your Meal Type</h2>
@@ -189,7 +183,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 2: Bread Selection */}
         {currentStep === 2 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">
@@ -202,7 +195,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 3: Protein Selection */}
         {currentStep === 3 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Select Your Protein</h2>
@@ -213,7 +205,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 4: Cheese Selection */}
         {currentStep === 4 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Select Your Cheese</h2>
@@ -224,7 +215,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 5: Vegetable Selection */}
         {currentStep === 5 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Select Your Vegetables</h2>
@@ -235,7 +225,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 6: Sauce Selection */}
         {currentStep === 6 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Select Your Sauces</h2>
@@ -246,7 +235,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 7: Sides Selection */}
         {currentStep === 7 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Add Sides</h2>
@@ -257,7 +245,6 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Step 8: Summary */}
         {currentStep === 8 && (
           <div className="animate-fade-in">
             <h2 className="text-xl font-semibold mb-4">Your Meal Summary</h2>
@@ -265,10 +252,8 @@ const CalculatorForm = () => {
           </div>
         )}
 
-        {/* Separator */}
         <Separator className="my-6" />
 
-        {/* Navigation Buttons */}
         <div className="flex justify-between">
           <Button 
             variant="outline" 
