@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Calculator, Sandwich, Leaf, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const scrollToCalculator = () => {
@@ -17,10 +18,10 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Make <span className="text-subway-green">Healthier</span> Choices at <span className="text-subway-yellow">Subway</span>
+              <span className="text-subway-green">Subway Nutrition</span> & <span className="text-subway-yellow">Calorie Calculator</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Our nutrition calculator helps you build customized meals that align with your dietary goals. Track calories, macros, and make informed decisions.
+              Our accurate Subway nutrition calculator helps you build customized meals that align with your dietary goals. Track calories, macros, and make informed decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -30,13 +31,15 @@ const Hero = () => {
               >
                 Try Our Calculator <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-subway-green text-subway-green hover:bg-subway-green/10"
-              >
-                View Nutrition Database
-              </Button>
+              <Link to="/nutrition-database">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-subway-green text-subway-green hover:bg-subway-green/10"
+                >
+                  View Nutrition Database
+                </Button>
+              </Link>
             </div>
             <div className="flex items-center mt-12 space-x-8">
               <div className="flex items-center">

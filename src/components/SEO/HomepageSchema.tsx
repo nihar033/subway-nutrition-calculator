@@ -6,40 +6,62 @@ const HomepageSchema = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Subway Smart Eats Guide",
-    "url": "https://subwaysmarteats.com/",
+    "name": "Subway Nutrition Calculator",
+    "url": "https://subway-nutrition-calculator.com/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://subwaysmarteats.com/search?q={search_term_string}",
+      "target": "https://subway-nutrition-calculator.com/nutrition-database?search={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "description": "Use our Subway Nutrition Calculator to make healthier choices. Track calories, macros, and find heart-healthy options for your Subway sandwich, salad, or wrap.",
     "publisher": {
       "@type": "Organization",
-      "name": "Subway Smart Eats Guide",
+      "name": "Subway Nutrition Calculator",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://subwaysmarteats.com/logo.png"
+        "url": "https://subway-nutrition-calculator.com/logo.png"
       }
-    }
+    },
+    "keywords": [
+      "subway nutrition calculator",
+      "subway calorie calculator",
+      "subway calories",
+      "healthy subway options",
+      "subway menu nutrition",
+      "subway macros",
+      "subway nutritional information"
+    ]
   };
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Subway Smart Eats Guide",
-    "url": "https://subwaysmarteats.com",
-    "logo": "https://subwaysmarteats.com/logo.png",
+    "name": "Subway Nutrition Calculator",
+    "url": "https://subway-nutrition-calculator.com",
+    "logo": "https://subway-nutrition-calculator.com/logo.png",
     "sameAs": [
-      "https://facebook.com/subwaysmarteats",
-      "https://twitter.com/subwaysmarteats",
-      "https://instagram.com/subwaysmarteats"
+      "https://facebook.com/subwaynutritioncalculator",
+      "https://twitter.com/subway_nutrition",
+      "https://instagram.com/subway_nutrition"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service"
+      "contactType": "customer service",
+      "email": "contact@subway-nutrition-calculator.com"
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://subway-nutrition-calculator.com"
+      }
+    ]
   };
 
   return (
@@ -49,6 +71,9 @@ const HomepageSchema = () => {
       </script>
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
       </script>
     </Helmet>
   );

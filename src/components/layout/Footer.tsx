@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Calculator, Facebook, Twitter, Instagram, Youtube, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-gray-100 pt-12 pb-6">
       <div className="container-custom">
@@ -15,13 +17,13 @@ const Footer = () => {
               <div>
                 <h2 className="text-xl font-bold">
                   <span className="text-subway-green">Subway</span>
-                  <span className="text-subway-yellow">Smart</span>
-                  <span className="text-gray-700">Eats</span>
+                  <span className="text-subway-yellow">Nutrition</span>
+                  <span className="text-gray-700">Calculator</span>
                 </h2>
               </div>
             </Link>
             <p className="text-gray-600 mb-4">
-              Helping you make informed nutrition choices when eating at Subway. Our calculator lets you plan your meal with real-time nutrition updates.
+              Helping you make informed nutrition choices when eating at Subway. Our calculator lets you plan your meal with real-time calorie and nutrition updates.
             </p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -102,7 +104,7 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-4 text-gray-800">Newsletter</h3>
             <p className="text-gray-600 mb-4">
-              Subscribe to our newsletter for tips on making healthier choices at Subway.
+              Subscribe to our newsletter for tips on making healthier choices at Subway and calorie-saving hacks.
             </p>
             <div className="flex flex-col space-y-2">
               <input 
@@ -122,7 +124,7 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="text-center text-gray-600 text-sm">
-          <p>&copy; {new Date().getFullYear()} SubwaySmartEats. All rights reserved.</p>
+          <p>&copy; {currentYear} Subway Nutrition Calculator. All rights reserved.</p>
           <p className="mt-2">
             This website is not affiliated with or endorsed by Subway® Restaurants. Subway® is a registered trademark of Subway IP LLC.
           </p>

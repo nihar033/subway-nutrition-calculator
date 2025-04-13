@@ -1,14 +1,24 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Calculator, Search, Info, FileText, Home, HelpCircle, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/nutrition-database?search=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm('');
+    }
   };
 
   return (
@@ -20,10 +30,10 @@ const Header = () => {
             <div>
               <h1 className="text-xl font-bold">
                 <span className="text-subway-green">Subway</span>
-                <span className="text-subway-yellow">Smart</span>
-                <span className="text-gray-700">Eats</span>
+                <span className="text-subway-yellow">Nutrition</span>
+                <span className="text-gray-700">Calculator</span>
               </h1>
-              <p className="text-xs text-gray-500">Nutrition Calculator</p>
+              <p className="text-xs text-gray-500">Track Subway Calories</p>
             </div>
           </Link>
           
@@ -49,10 +59,18 @@ const Header = () => {
               <MessageCircle className="w-4 h-4" />
               <span>Contact</span>
             </Link>
-            <Button variant="outline" className="bg-primary text-white hover:bg-primary/90">
-              <Search className="w-4 h-4 mr-2" />
-              Search
-            </Button>
+            <form onSubmit={handleSearch} className="flex">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search menu items..."
+                className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <Button type="submit" variant="default" className="bg-primary text-white hover:bg-primary/90 rounded-l-none">
+                <Search className="w-4 h-4" />
+              </Button>
+            </form>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -111,12 +129,18 @@ const Header = () => {
                 <MessageCircle className="w-5 h-5 text-primary" />
                 <span>Contact</span>
               </Link>
-              <div className="pt-2">
-                <Button variant="outline" className="w-full bg-primary text-white hover:bg-primary/90">
-                  <Search className="w-4 h-4 mr-2" />
-                  Search
+              <form onSubmit={handleSearch} className="flex pt-2">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search menu items..."
+                  className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary w-full"
+                />
+                <Button type="submit" variant="default" className="bg-primary text-white hover:bg-primary/90 rounded-l-none">
+                  <Search className="w-4 h-4" />
                 </Button>
-              </div>
+              </form>
             </div>
           </nav>
         )}
