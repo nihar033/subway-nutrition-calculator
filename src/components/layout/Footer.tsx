@@ -126,6 +126,9 @@ const Footer = () => {
         <div className="text-center text-gray-600 text-sm">
           <p>&copy; {currentYear} Subway Nutrition Calculator. All rights reserved.</p>
           <p className="mt-2">
+            Contact us: <a href="mailto:subwaynutritioncal@gmail.com" className="text-primary hover:underline">subwaynutritioncal@gmail.com</a>
+          </p>
+          <p className="mt-2">
             This website is not affiliated with or endorsed by Subway® Restaurants. Subway® is a registered trademark of Subway IP LLC.
           </p>
         </div>

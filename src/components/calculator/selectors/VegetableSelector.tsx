@@ -4,6 +4,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Vegetable, CalculatorSelection } from '@/types/nutrition';
 import { vegetableOptions } from '@/data/nutritionData';
+import { CheckCircle2 } from 'lucide-react';
 
 interface VegetableSelectorProps {
   selection: CalculatorSelection;
@@ -48,14 +49,14 @@ const VegetableSelector: React.FC<VegetableSelectorProps> = ({ selection, setSel
       <div className="flex justify-end mb-4 space-x-4">
         <button
           onClick={selectAll}
-          className="text-sm text-primary hover:text-primary/80 font-medium"
+          className="text-sm text-subway-green hover:text-subway-green/80 font-medium transition-all duration-200"
           type="button"
         >
           Select All
         </button>
         <button
           onClick={clearAll}
-          className="text-sm text-gray-500 hover:text-gray-700 font-medium"
+          className="text-sm text-gray-500 hover:text-gray-700 font-medium transition-all duration-200"
           type="button"
         >
           Clear All
@@ -67,13 +68,20 @@ const VegetableSelector: React.FC<VegetableSelectorProps> = ({ selection, setSel
           const isChecked = selection.vegetables.some(v => v.id === vegetable.id);
           
           return (
-            <div key={vegetable.id} className="relative">
-              <div className={`p-4 rounded-lg border-2 ${isChecked ? 'border-primary bg-primary/5' : 'border-gray-200'} hover:border-primary transition-colors`}>
+            <div key={vegetable.id} className="relative" onClick={() => toggleVegetable(vegetable)}>
+              <div 
+                className={`p-4 rounded-lg transition-all duration-200 cursor-pointer relative ${
+                  isChecked 
+                    ? 'bg-subway-green/10 border-2 border-subway-green shadow-sm' 
+                    : 'border-2 border-gray-200 hover:border-subway-green/50 hover:shadow-sm'
+                }`}
+              >
                 <div className="flex items-start space-x-3">
                   <Checkbox
                     id={vegetable.id}
                     checked={isChecked}
                     onCheckedChange={() => toggleVegetable(vegetable)}
+                    className={`${isChecked ? 'bg-subway-green border-subway-green' : ''}`}
                   />
                   <div>
                     <Label htmlFor={vegetable.id} className="font-medium cursor-pointer">
@@ -84,6 +92,9 @@ const VegetableSelector: React.FC<VegetableSelectorProps> = ({ selection, setSel
                     </div>
                   </div>
                 </div>
+                {isChecked && (
+                  <CheckCircle2 className="absolute top-2 right-2 h-4 w-4 text-subway-green" />
+                )}
               </div>
             </div>
           );

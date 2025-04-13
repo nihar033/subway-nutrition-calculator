@@ -147,8 +147,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-gray-600">info@subwaysmarteats.com</p>
-                    <p className="text-gray-600">support@subwaysmarteats.com</p>
+                    <p className="text-gray-600">subwaynutritioncal@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>

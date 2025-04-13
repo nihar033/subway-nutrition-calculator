@@ -47,7 +47,7 @@ const HomepageSchema = () => {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "contact@subway-nutrition-calculator.com"
+      "email": "subwaynutritioncal@gmail.com"
     }
   };
 
