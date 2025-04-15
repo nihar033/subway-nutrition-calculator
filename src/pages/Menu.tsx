@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Sandwich, Wrap, Salad, Cookie, Soup, UtensilsCrossed, Wheat, Drop } from 'lucide-react';
+import { Sandwich, Salad, Cookie, Soup, UtensilsCrossed, Wheat, MapPin, Droplet } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const MenuPage = () => {
@@ -66,7 +66,7 @@ const MenuPage = () => {
         {/* Wraps Section */}
         <section className="mb-12">
           <div className="flex items-center gap-2 mb-6">
-            <Wrap className="w-8 h-8 text-subway-green" />
+            <MapPin className="w-8 h-8 text-subway-green" />
             <h2 className="text-3xl font-bold">Subway Wraps Menu</h2>
           </div>
           <Card className="p-6">
@@ -212,7 +212,7 @@ const MenuPage = () => {
           {/* Sauces Section */}
           <section>
             <div className="flex items-center gap-2 mb-6">
-              <Drop className="w-8 h-8 text-subway-green" />
+              <Droplet className="w-8 h-8 text-subway-green" />
               <h2 className="text-3xl font-bold">Sauces</h2>
             </div>
             <Card className="p-6">
