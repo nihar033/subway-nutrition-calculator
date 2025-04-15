@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, Calculator, Search, Info, FileText, Home, HelpCircle, MessageCircle } from 'lucide-react';
+import { Menu, X, Calculator, Info, FileText, Home, HelpCircle, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -43,6 +42,10 @@ const Header = () => {
               <Home className="w-4 h-4" />
               <span>Home</span>
             </Link>
+            <Link to="/menu" className="text-gray-700 hover:text-primary flex items-center space-x-1">
+              <FileText className="w-4 h-4" />
+              <span>Menu</span>
+            </Link>
             <Link to="/about" className="text-gray-700 hover:text-primary flex items-center space-x-1">
               <Info className="w-4 h-4" />
               <span>About</span>
@@ -59,18 +62,6 @@ const Header = () => {
               <MessageCircle className="w-4 h-4" />
               <span>Contact</span>
             </Link>
-            <form onSubmit={handleSearch} className="flex">
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search menu items..."
-                className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Button type="submit" variant="default" className="bg-primary text-white hover:bg-primary/90 rounded-l-none">
-                <Search className="w-4 h-4" />
-              </Button>
-            </form>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -96,6 +87,14 @@ const Header = () => {
               >
                 <Home className="w-5 h-5 text-primary" />
                 <span>Home</span>
+              </Link>
+              <Link 
+                to="/menu" 
+                className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <FileText className="w-5 h-5 text-primary" />
+                <span>Menu</span>
               </Link>
               <Link 
                 to="/about" 

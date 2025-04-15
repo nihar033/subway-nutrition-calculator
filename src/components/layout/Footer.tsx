@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, Facebook, Twitter, Instagram, Youtube, ArrowRight } from 'lucide-react';
@@ -9,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 pt-12 pb-6">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Logo and Description */}
-          <div className="col-span-1 md:col-span-1">
+          <div className="col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <Calculator className="w-8 h-8 text-subway-green" />
               <div>
@@ -48,6 +47,11 @@ const Footer = () => {
               <li>
                 <Link to="/" className="text-gray-600 hover:text-primary flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" /> Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/menu" className="text-gray-600 hover:text-primary flex items-center">
+                  <ArrowRight className="w-4 h-4 mr-2" /> Menu
                 </Link>
               </li>
               <li>
@@ -99,24 +103,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
-          {/* Newsletter */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">Newsletter</h3>
-            <p className="text-gray-600 mb-4">
-              Subscribe to our newsletter for tips on making healthier choices at Subway and calorie-saving hacks.
-            </p>
-            <div className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-              <button className="bg-primary text-white py-2 px-4 rounded-md hover:bg-primary/90 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
         
         {/* Divider */}
@@ -125,9 +111,6 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-gray-600 text-sm">
           <p>&copy; {currentYear} Subway Nutrition Calculator. All rights reserved.</p>
-          <p className="mt-2">
-            Contact us: <a href="mailto:subwaynutritioncal@gmail.com" className="text-primary hover:underline">subwaynutritioncal@gmail.com</a>
-          </p>
           <p className="mt-2">
             This website is not affiliated with or endorsed by Subway® Restaurants. Subway® is a registered trademark of Subway IP LLC.
           </p>

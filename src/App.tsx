@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,6 +7,7 @@ import MainLayout from "@/components/layout/MainLayout";
 
 // Pages
 import HomePage from "./pages/Index";
+import MenuPage from "./pages/Menu";
 import AboutPage from "./pages/About";
 import NutritionDatabasePage from "./pages/NutritionDatabase";
 import FAQPage from "./pages/FAQ";
@@ -27,6 +27,7 @@ const App = () => (
         <MainLayout>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/menu" element={<MenuPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/nutrition-database" element={<NutritionDatabasePage />} />
             <Route path="/faq" element={<FAQPage />} />
