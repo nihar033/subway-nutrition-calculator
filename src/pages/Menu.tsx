@@ -10,6 +10,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import DownloadMenuButton from '@/components/menu/DownloadMenuButton';
 
 const MenuPage = () => {
   // Schema data for the menu page
@@ -144,6 +145,10 @@ const MenuPage = () => {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Looking for the Subway menu prices with pictures? You've come to the right place. Whether you're planning your lunch or a party platter for a group, this Subway menu with prices (2025) guide has everything you need — from wraps to sandwiches, cookies to catering.
             </p>
+          </div>
+
+          <div className="flex justify-end">
+            <DownloadMenuButton />
           </div>
 
           {/* Sandwiches Section */}
