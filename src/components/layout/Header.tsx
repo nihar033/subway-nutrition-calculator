@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Calculator, Info, FileText, Home, HelpCircle, MessageCircle } from 'lucide-react';
@@ -137,7 +138,7 @@ const Header = () => {
                   className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary w-full"
                 />
                 <Button type="submit" variant="default" className="bg-primary text-white hover:bg-primary/90 rounded-l-none">
-                  <Search className="w-4 h-4" />
+                  Search
                 </Button>
               </form>
             </div>
