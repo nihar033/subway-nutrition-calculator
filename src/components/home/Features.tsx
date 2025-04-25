@@ -40,10 +40,11 @@ const Features = () => {
     <section className="py-16 bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="section-title">Why Use Our Nutrition Calculator?</h2>
+          <h2 className="section-title">Why Use Our Subway Calorie Calculator?</h2>
           <p className="section-subtitle">
-            Our calculator is designed with your health in mind, making it easy to plan meals
-            that meet your dietary needs while enjoying your favorite Subway options.
+            Unlike static nutrition lists, our Subway sandwich nutrition calculator and Subway macro tracker update instantly. You can calculate Subway calories, track macros, and optimize your meal for low-carb, high-protein, or low-sodium diets as you build.
+
+Whether you need a Subway salad calorie calculator, Subway wrap calories calculator, or just want to know the calories of a Subway sandwich, we’ve got you covered.
           </p>
         </div>
 
