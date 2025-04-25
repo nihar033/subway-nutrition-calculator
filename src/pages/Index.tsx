@@ -21,14 +21,8 @@ const Index = () => {
       
       {/* Hero Section */}
       <Hero />
-      
-      {/* Features Section */}
-      <Features />
-      
-      {/* How It Works Section */}
-      <HowItWorks />
-      
-      {/* Calculator Section */}
+
+       {/* Calculator Section */}
       <section id="calculator-section" className="py-16">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -44,6 +38,14 @@ Whether you're tracking macros with our Subway macro calculator, counting calori
         </div>
       </section>
       
+      
+      {/* Features Section */}
+      <Features />
+      
+      {/* How It Works Section */}
+      <HowItWorks />
+      
+     
       {/* Testimonials Section */}
       <Testimonials />
       
