@@ -5,18 +5,18 @@ import { Calculator, Utensils, Heart, BarChart, Zap, Medal } from 'lucide-react'
 const Features = () => {
   const features = [
     {
-      title: 'Real-Time Nutrition Tracking',
-      description: 'See nutrition information update instantly as you customize your sandwich, salad, or wrap.',
+      title: 'Real-Time Subway Nutrition Tracking',
+      description: 'Watch calories, macros, and sodium update live as you add or remove ingredients.',
       icon: <Calculator className="h-8 w-8 text-subway-green" />,
     },
     {
-      title: 'Heart-Healthy Options',
-      description: 'Easily identify heart-healthy choices that align with nutrition guidelines.',
+      title: 'Heart-Healthy Subway Meal Options',
+      description: 'Highlight meals that meet AHA heart-health standards.',
       icon: <Heart className="h-8 w-8 text-subway-green" />,
     },
     {
-      title: 'Customizable Meals',
-      description: 'Build your meal just the way you like it while staying informed about nutritional impact.',
+      title: 'Fully Customizable Subway Meal Builder',
+      description: 'Choose your base (sandwich, salad, wrap, or bowl), bread, protein, veggies, cheese, sauces, and sides.',
       icon: <Utensils className="h-8 w-8 text-subway-green" />,
     },
     {
