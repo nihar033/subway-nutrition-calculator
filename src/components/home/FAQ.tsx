@@ -30,6 +30,14 @@ const FAQ = () => {
       answer: 'Yes, our Subway Nutrition Calculator allows you to print your complete meal nutrition information including calories, macros, and allergens. This feature makes it easy to track your nutrition or share information with healthcare providers.',
     },
     {
+      question: 'Is there a Subway macro calculator?',
+      answer: 'Yes! Our calculator functions as a Subway macro counter for proteins, fats, and carbs.',
+    },
+    {
+      question: 'Can I use this Subway calorie calculator for salads and wraps?',
+      answer: 'Absolutely. It works for Subway salads, wraps, sandwiches, and protein bowls.',
+    },
+    {
       question: 'Is this Subway Nutrition Calculator affiliated with Subway?',
       answer: 'No, this website is not affiliated with, endorsed by, or sponsored by Subway. We\'re an independent resource providing nutrition information to help consumers make informed choices. Subway® is a registered trademark of Subway IP LLC.',
     },
