@@ -21,7 +21,7 @@ const Hero = () => {
               <span className="text-subway-green">Subway Nutrition</span> & <span className="text-subway-yellow">Calorie Calculator</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Our accurate Subway nutrition calculator helps you build customized meals that align with your dietary goals. Track calories, macros, and make informed decisions.
+              Make smarter meal choices with our Subway Nutrition Calculator. Instantly track calories, macros, sodium, and more — build your Subway sandwich, wrap, salad, or protein bowl and see nutrition facts in real time with our Subway calorie calculator.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
