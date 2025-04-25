@@ -34,7 +34,9 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="section-title">Subway Nutrition Calculator</h2>
             <p className="section-subtitle">
-              Build your custom meal and see real-time nutrition information. Make healthier choices with our easy-to-use calculator.
+             Use our powerful Subway nutrition calculator and Subway calorie counter to create your perfect meal, step by step. Instantly view calories, macros, sodium, and other important data for every sandwich, salad, or wrap you build.
+
+Whether you're tracking macros with our Subway macro calculator, counting calories, or following a heart-healthy diet, our tool makes it simple.
             </p>
           </div>
           
