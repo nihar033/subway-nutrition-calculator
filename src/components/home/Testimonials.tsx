@@ -8,7 +8,7 @@ const Testimonials = () => {
     {
       name: 'Sarah J.',
       role: 'Fitness Enthusiast',
-      content: 'This Subway calorie tracker is amazing. I always know exactly what I'm eating — super helpful during my marathon training!',
+      content: 'This Subway calorie tracker is amazing. I always know exactly what I\'m eating — super helpful during my marathon training!',
       rating: 5,
       image: '/testimonials/person1.jpg',
     },
