@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Utensils, PlusCircle, Layers, CheckCircle, Printer, SlidersTwoStack } from 'lucide-react';
+import { Utensils, PlusCircle, Layers, CheckCircle, Printer, Ruler } from 'lucide-react';
 
 const HowItWorks = () => {
   const steps = [
@@ -13,7 +13,7 @@ const HowItWorks = () => {
     {
       title: 'Choose Size',
       description: '6-inch, Footlong, Salad, or Bowl.',
-      icon: <SlidersTwoStack className="h-8 w-8 text-white" />,
+      icon: <Ruler className="h-8 w-8 text-white" />,
       color: 'bg-subway-yellow',
     },
     {
