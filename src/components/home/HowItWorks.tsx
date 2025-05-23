@@ -1,32 +1,44 @@
 
 import React from 'react';
-import { Utensils, PlusCircle, Layers, CheckCircle } from 'lucide-react';
+import { Utensils, PlusCircle, Layers, CheckCircle, Printer, SlidersTwoStack } from 'lucide-react';
 
 const HowItWorks = () => {
   const steps = [
     {
-      title: 'Select Your Base',
-      description: 'Choose between a sandwich, salad, or wrap to start building your meal.',
+      title: 'Select Meal Type',
+      description: 'Sandwich, Salad, Wrap, or Protein Bowl.',
       icon: <Utensils className="h-8 w-8 text-white" />,
       color: 'bg-subway-green',
     },
     {
-      title: 'Add Ingredients',
-      description: 'Customize with your choice of bread, protein, cheese, veggies, and sauces.',
-      icon: <PlusCircle className="h-8 w-8 text-white" />,
+      title: 'Choose Size',
+      description: '6-inch, Footlong, Salad, or Bowl.',
+      icon: <SlidersTwoStack className="h-8 w-8 text-white" />,
       color: 'bg-subway-yellow',
     },
     {
-      title: 'Review Nutrition',
-      description: 'See real-time updates of your meal\'s nutritional content as you build it.',
-      icon: <Layers className="h-8 w-8 text-white" />,
+      title: 'Add Ingredients',
+      description: 'Pick your bread, protein, cheese, veggies, and sauces.',
+      icon: <PlusCircle className="h-8 w-8 text-white" />,
       color: 'bg-primary',
     },
     {
-      title: 'Make Informed Choices',
-      description: 'Adjust your selections to meet your dietary goals and preferences.',
-      icon: <CheckCircle className="h-8 w-8 text-white" />,
+      title: 'Instant Nutrition Summary',
+      description: 'See Subway calories, macros, sodium, and more update live.',
+      icon: <Layers className="h-8 w-8 text-white" />,
       color: 'bg-blue-500',
+    },
+    {
+      title: 'Optimize for Your Diet',
+      description: 'Adjust as needed for your dietary goals.',
+      icon: <CheckCircle className="h-8 w-8 text-white" />,
+      color: 'bg-purple-500',
+    },
+    {
+      title: 'Print or Save (Coming Soon)',
+      description: 'Download or share your Subway meal summary!',
+      icon: <Printer className="h-8 w-8 text-white" />,
+      color: 'bg-indigo-500',
     },
   ];
 
@@ -34,13 +46,13 @@ const HowItWorks = () => {
     <section className="py-16">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="section-title">How to Use Our Calculator</h2>
+          <h2 className="section-title">How It Works: Step-by-Step</h2>
           <p className="section-subtitle">
             Follow these simple steps to create your perfect meal while keeping track of nutrition information.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className={`${step.color} w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto`}>
@@ -53,11 +65,6 @@ const HowItWorks = () => {
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
-              
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gray-200 -z-10 transform -translate-x-8"></div>
-              )}
             </div>
           ))}
         </div>

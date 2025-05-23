@@ -20,18 +20,18 @@ const Features = () => {
       icon: <Utensils className="h-8 w-8 text-subway-green" />,
     },
     {
-      title: 'Detailed Nutrition Data',
-      description: 'Access comprehensive information about calories, macros, sodium, and more.',
+      title: 'Mobile Responsive Subway Nutrition Tool',
+      description: 'Use the calculator seamlessly on any device — no app required.',
       icon: <BarChart className="h-8 w-8 text-subway-green" />,
     },
     {
-      title: 'Mobile Accessibility',
-      description: 'Use our calculator on any device, whether you\'re at home or on the go.',
+      title: 'Compare to FDA Guidelines',
+      description: 'See how your custom Subway meal nutrition stacks up against daily values.',
       icon: <Zap className="h-8 w-8 text-subway-green" />,
     },
     {
-      title: 'FDA Guidelines Integration',
-      description: 'See daily value percentages based on a 2,000-calorie diet or customize for your needs.',
+      title: 'Supports US & UK Subway Menus',
+      description: 'Select Subway USA or Subway UK for accurate, localized nutrition facts.',
       icon: <Medal className="h-8 w-8 text-subway-green" />,
     },
   ];
@@ -44,7 +44,7 @@ const Features = () => {
           <p className="section-subtitle">
             Unlike static nutrition lists, our Subway sandwich nutrition calculator and Subway macro tracker update instantly. You can calculate Subway calories, track macros, and optimize your meal for low-carb, high-protein, or low-sodium diets as you build.
 
-Whether you need a Subway salad calorie calculator, Subway wrap calories calculator, or just want to know the calories of a Subway sandwich, we’ve got you covered.
+Whether you need a Subway salad calorie calculator, Subway wrap calories calculator, or just want to know the calories of a Subway sandwich, we've got you covered.
           </p>
         </div>
 

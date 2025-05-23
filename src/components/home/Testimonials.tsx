@@ -6,22 +6,22 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Sarah J.',
       role: 'Fitness Enthusiast',
-      content: 'This Subway calorie tracker is amazing. I always know exactly what I’m eating — super helpful during my marathon training!',
+      content: 'This Subway calorie tracker is amazing. I always know exactly what I'm eating — super helpful during my marathon training!',
       rating: 5,
       image: '/testimonials/person1.jpg',
     },
     {
-      name: 'Michael Chen',
+      name: 'Michael C.',
       role: 'Nutrition Coach',
       content: 'Finally a Subway sandwich calorie calculator that actually updates macros live! Highly recommended for my nutrition clients.',
       rating: 5,
       image: '/testimonials/person2.jpg',
     },
     {
-      name: 'Emma Rodriguez',
-      role: 'Working Parent',
+      name: 'Emma R.',
+      role: 'Working Mom',
       content: 'As a busy parent, I love quickly checking the Subway calories counter on my phone before ordering.',
       rating: 4,
       image: '/testimonials/person3.jpg',

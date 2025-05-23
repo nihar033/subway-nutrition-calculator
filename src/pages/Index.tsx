@@ -10,6 +10,8 @@ import CalculatorForm from '@/components/calculator/CalculatorForm';
 import HomepageSchema from '@/components/SEO/HomepageSchema';
 import FAQSchema from '@/components/SEO/FAQSchema';
 import CalculatorSchema from '@/components/SEO/CalculatorSchema';
+import ComparisonTable from '@/components/home/ComparisonTable';
+import HomepageFAQ from '@/components/home/HomepageFAQ';
 
 const Index = () => {
   return (
@@ -22,15 +24,13 @@ const Index = () => {
       {/* Hero Section */}
       <Hero />
 
-       {/* Calculator Section */}
+      {/* Calculator Section */}
       <section id="calculator-section" className="py-16">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="section-title">Subway Nutrition Calculator</h2>
+            <h2 className="section-title">Subway Nutrition Calculator, Calorie Counter & Meal Builder</h2>
             <p className="section-subtitle">
-             Use our powerful Subway nutrition calculator and Subway calorie counter to create your perfect meal, step by step. Instantly view calories, macros, sodium, and other important data for every sandwich, salad, or wrap you build.
-
-Whether you're tracking macros with our Subway macro calculator, counting calories, or following a heart-healthy diet, our tool makes it simple.
+              Make smarter meal choices with our Subway Nutrition Calculator. Instantly track calories, macros, sodium, and more — build your Subway sandwich, wrap, salad, or protein bowl and see nutrition facts in real time with our Subway calorie calculator.
             </p>
           </div>
           
@@ -38,18 +38,22 @@ Whether you're tracking macros with our Subway macro calculator, counting calori
         </div>
       </section>
       
-      
       {/* Features Section */}
       <Features />
       
       {/* How It Works Section */}
       <HowItWorks />
       
-     
+      {/* Comparison Table Section */}
+      <ComparisonTable />
+      
       {/* Testimonials Section */}
       <Testimonials />
       
       {/* FAQ Section */}
+      <HomepageFAQ />
+      
+      {/* Regular FAQ Section */}
       <FAQ />
       
       {/* CTA Section */}
