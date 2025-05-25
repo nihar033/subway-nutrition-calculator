@@ -30,8 +30,8 @@ const Features = () => {
       icon: <Zap className="h-8 w-8 text-subway-green" />,
     },
     {
-      title: 'Supports US & UK Subway Menus',
-      description: 'Select Subway USA or Subway UK for accurate, localized nutrition facts.',
+      title: 'Supports US, UK & Canada Subway Menus',
+      description: 'Toggle between Subway USA, Subway UK, or Subway Canada for accurate, localized nutrition facts and calorie counts.',
       icon: <Medal className="h-8 w-8 text-subway-green" />,
     },
   ];

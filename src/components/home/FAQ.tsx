@@ -26,6 +26,18 @@ const FAQ = () => {
       answer: 'Absolutely. It works for Subway salads, wraps, sandwiches, and protein bowls.',
     },
     {
+      question: 'Can I check sodium or carbs in my Subway meal?',
+      answer: 'Yes, it also functions as a Subway sodium calculator and Subway carbs calculator to help you track these nutrients.',
+    },
+    {
+      question: 'Does this work as a Subway salad calories calculator?',
+      answer: 'Yes! Our calculator works perfectly as a Subway salad calorie calculator - just select "Salad" as your meal type and add your ingredients.',
+    },
+    {
+      question: 'Can I use this for Subway wrap nutrition?',
+      answer: 'Absolutely! It functions as a comprehensive Subway wrap calories calculator for all wrap varieties.',
+    },
+    {
       question: 'How can I find low-calorie options at Subway?',
       answer: 'Our Subway Calorie Calculator allows you to compare different ingredients and meal combinations to find lower-calorie options. Generally, choosing lean proteins like turkey or chicken breast, loading up on veggies, and selecting lighter sauces will create a lower-calorie meal.',
     },
