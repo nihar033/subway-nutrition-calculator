@@ -11,6 +11,7 @@ import HomepageSchema from '@/components/SEO/HomepageSchema';
 import FAQSchema from '@/components/SEO/FAQSchema';
 import CalculatorSchema from '@/components/SEO/CalculatorSchema';
 import ComparisonTable from '@/components/home/ComparisonTable';
+import WelcomeContent from '@/components/home/WelcomeContent';
 
 const Index = () => {
   return (
@@ -22,6 +23,9 @@ const Index = () => {
       
       {/* Hero Section */}
       <Hero />
+
+      {/* Welcome Content Section */}
+      <WelcomeContent />
 
       {/* Calculator Section */}
       <section id="calculator-section" className="py-16">
