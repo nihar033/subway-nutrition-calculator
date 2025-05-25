@@ -11,7 +11,6 @@ import HomepageSchema from '@/components/SEO/HomepageSchema';
 import FAQSchema from '@/components/SEO/FAQSchema';
 import CalculatorSchema from '@/components/SEO/CalculatorSchema';
 import ComparisonTable from '@/components/home/ComparisonTable';
-import HomepageFAQ from '@/components/home/HomepageFAQ';
 
 const Index = () => {
   return (
@@ -50,10 +49,7 @@ const Index = () => {
       {/* Testimonials Section */}
       <Testimonials />
       
-      {/* FAQ Section */}
-      <HomepageFAQ />
-      
-      {/* Regular FAQ Section */}
+      {/* Combined FAQ Section */}
       <FAQ />
       
       {/* CTA Section */}

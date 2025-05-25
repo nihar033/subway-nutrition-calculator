@@ -10,8 +10,20 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: 'How accurate is the Subway Nutrition Calculator?',
+      question: 'How accurate is this Subway nutrition calculator?',
       answer: 'Our Subway Nutrition Calculator provides nutrition information based on Subway\'s official nutritional data. We regularly update our database to ensure accuracy, but values may vary slightly based on preparation methods and ingredient variations at different Subway locations.',
+    },
+    {
+      question: 'How do I find the calories in my Subway sandwich?',
+      answer: 'Simply build your meal with our Subway sandwich calorie calculator — calories and macros update live!',
+    },
+    {
+      question: 'Is there a Subway macro calculator?',
+      answer: 'Yes! Our tool functions as a Subway macro counter for proteins, fats, and carbs.',
+    },
+    {
+      question: 'Can I use this Subway calorie calculator for salads and wraps?',
+      answer: 'Absolutely. It works for Subway salads, wraps, sandwiches, and protein bowls.',
     },
     {
       question: 'How can I find low-calorie options at Subway?',
@@ -30,15 +42,7 @@ const FAQ = () => {
       answer: 'Yes, our Subway Nutrition Calculator allows you to print your complete meal nutrition information including calories, macros, and allergens. This feature makes it easy to track your nutrition or share information with healthcare providers.',
     },
     {
-      question: 'Is there a Subway macro calculator?',
-      answer: 'Yes! Our calculator functions as a Subway macro counter for proteins, fats, and carbs.',
-    },
-    {
-      question: 'Can I use this Subway calorie calculator for salads and wraps?',
-      answer: 'Absolutely. It works for Subway salads, wraps, sandwiches, and protein bowls.',
-    },
-    {
-      question: 'Is this Subway Nutrition Calculator affiliated with Subway?',
+      question: 'Is this tool affiliated with Subway?',
       answer: 'No, this website is not affiliated with, endorsed by, or sponsored by Subway. We\'re an independent resource providing nutrition information to help consumers make informed choices. Subway® is a registered trademark of Subway IP LLC.',
     },
   ];
