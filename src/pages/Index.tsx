@@ -6,7 +6,7 @@ import CalculatorForm from '@/components/calculator/CalculatorForm';
 import HomepageSchema from '@/components/SEO/HomepageSchema';
 import FAQSchema from '@/components/SEO/FAQSchema';
 import CalculatorSchema from '@/components/SEO/CalculatorSchema';
-import NewWelcomeContent from '@/components/home/NewWelcomeContent';
+import WelcomeContent from '@/components/home/WelcomeContent';
 
 const Index = () => {
   return (
@@ -33,8 +33,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New Welcome Content */}
-      <NewWelcomeContent />
+      {/* Original Welcome Content */}
+      <WelcomeContent />
       
       {/* Combined FAQ Section */}
       <FAQ />

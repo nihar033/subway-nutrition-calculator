@@ -43,7 +43,7 @@ const WelcomeContent = () => {
         {/* Welcome Section */}
         <div className="max-w-4xl mx-auto mb-16">
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Welcome to the ultimate Subway Nutrition Calculator — your all-in-one tool to track calories, macros, and nutritional information for your favorite Subway meals. Whether you're focused on fitness, managing macros, or just curious about what's in your sub, our calculator gives you real-time data for smarter eating.
+            Your all-in-one tool to track calories, macros, and nutritional information for your favorite Subway meals. Whether you're focused on fitness, managing macros, or just curious about what's in your sub, our calculator gives you real-time data for smarter eating.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
             Designed for both Subway USA and Subway UK menus, this tool makes it easy to compare options, build your meal, and stay on track with your dietary goals. From sandwiches to wraps, salads to protein bowls, you can calculate nutrition for every item you add to your meal.
