@@ -1,86 +1,92 @@
 
 import React from 'react';
-import { CheckCircle, Search, Globe, BarChart, Zap, Medal, Heart, Utensils, Calculator, Shield } from 'lucide-react';
+import { CheckCircle, Search, Globe, BarChart, Zap, Medal, Heart, Utensils, Calculator, Shield, Star, Sandwich, Salad } from 'lucide-react';
 
 const NewWelcomeContent = () => {
   const whyUseFeatures = [
-    'Count total calories instantly',
-    'Break down macros: protein, carbs, fats',
-    'Analyze sodium, sugar, and fiber',
-    'Customize bread, meats, veggies, cheese, and sauces',
-    'Compare 6-inch vs. Footlong calories in seconds'
+    'Calculate total calories in your Subway meal',
+    'Count carbs, protein, fat, and sodium',
+    'Analyze macro breakdowns with our Subway macro calculator',
+    'Customize items like bread, sauces, veggies, cheese, and meat',
+    'See results instantly for both 6-inch and Footlong subs'
   ];
 
   const menuCoverage = [
-    'All Subway sandwiches, wraps, bowls, and salads',
-    'Sauces, toppings, cheese, and condiments',
-    'Bread types like Italian, Wheat, Flatbread & more'
+    { title: 'Bread Options', desc: 'Italian, multigrain, flatbread, and more' },
+    { title: 'Proteins', desc: 'Turkey, chicken, ham, steak, tuna, and plant-based alternatives' },
+    { title: 'Toppings', desc: 'A variety of fresh vegetables and cheeses' },
+    { title: 'Sauces', desc: 'From classic mustard to sweet onion and beyond' }
   ];
 
   const trackingFeatures = [
-    'Calories',
     'Protein',
-    'Carbohydrates',
+    'Carbs', 
     'Fats',
+    'Calories',
     'Sodium',
     'Sugars',
     'Fiber'
   ];
 
   const lowCalorieOptions = [
-    { name: 'Turkey Breast (6" on wheat)', calories: '~280 calories' },
-    { name: 'Veggie Delite (6" with mustard)', calories: '~230 calories' },
-    { name: 'Oven-Roasted Chicken (6")', calories: '~320 calories' }
+    { name: 'Turkey Breast on 9-grain wheat (6-inch)', calories: '~280 calories' },
+    { name: 'Veggie Delite with mustard', calories: '~230 calories' },
+    { name: 'Oven Roasted Chicken breast', calories: '~320 calories' }
   ];
 
   const highProteinMeals = [
-    { name: 'Double Meat Turkey', protein: '~46g protein' },
-    { name: 'Chicken & Bacon Ranch', protein: '~42g protein' },
-    { name: 'Subway Club with Extra Meat', protein: '~39g protein' }
+    { name: 'Double Meat Turkey Breast', protein: '46g protein' },
+    { name: 'Chicken & Bacon Ranch Melt', protein: '42g protein' },
+    { name: 'Subway Club with extra meat', protein: '39g protein' }
   ];
 
   const ketoOptions = [
-    'Protein Bowls (no bread): <15g carbs',
-    'Salads with meats & cheese',
-    'Low-carb sauces & toppings'
+    'Any protein as a salad (under 15g carbs)',
+    'Protein bowls without bread',
+    'Cheese and meat combinations'
   ];
 
-  const allergenFree = [
-    'Gluten',
-    'Dairy',
-    'Nuts'
+  const allergenInfo = [
+    'Gluten-free options',
+    'Dairy-free alternatives', 
+    'Nut allergy considerations',
+    'Vegetarian and vegan choices'
   ];
 
   const userTypes = [
-    'Gym-goers tracking macros',
-    'Dieters counting calories',
-    'Diabetics monitoring sugar',
-    'Vegans and vegetarians',
-    'Anyone customizing their Subway order'
+    'Fitness enthusiasts counting calories or macros',
+    'Keto or low-carb eaters avoiding certain ingredients',
+    'Diabetics monitoring sugar and carbs',
+    'Weight watchers building low-calorie Subway meals',
+    'Vegans or vegetarians tracking protein and fiber'
   ];
 
-  const steps = [
-    'Pick a base: Sandwich, wrap, salad, or bowl',
-    'Choose your bread and size (6" or Footlong)',
-    'Add proteins, veggies, cheese, and sauces',
-    'Instantly see total calories and macros',
-    'Export or save your custom meal data'
+  const howToSteps = [
+    'Select Your Base: Choose from sandwiches, salads, wraps, or protein bowls',
+    'Pick Your Bread: From classic Italian herbs & cheese to multigrain and flatbread options',
+    'Add Proteins: Select from turkey breast, chicken, roast beef, tuna, or plant-based alternatives',
+    'Customize Toppings: Add vegetables, cheese, and condiments while watching calories update',
+    'Compare Sizes: Toggle between 6-inch and Footlong portions instantly',
+    'Export Results: Save or share your custom meal\'s complete nutrition breakdown'
   ];
 
   const nutritionTips = [
-    'Load up on veggies (they\'re free & full of fiber)',
-    'Pick lean meats like turkey or grilled chicken',
-    'Choose vinegar or mustard over high-fat sauces'
+    'Load up on free vegetables for added vitamins and fiber',
+    'Choose lean proteins like turkey breast or grilled chicken',
+    'Opt for mustard or vinegar instead of high-calorie sauces',
+    'Consider the Subway protein bowl nutrition calculator option to reduce carbs while maximizing protein intake'
   ];
 
   const portionTips = [
-    'Use the 6" sub for lighter meals',
-    'Split a Footlong for two meals'
+    'Use our calculator to compare 6-inch vs Footlong portions',
+    'Split a Footlong into two meals for better portion management',
+    'Balance high-calorie ingredients with lower-calorie options'
   ];
 
   const mealTimingTips = [
-    'Choose higher-protein meals post-workout',
-    'Opt for lighter items during lunch hours'
+    'Use lighter options for lunch and heartier meals post-workout',
+    'Consider protein-heavy options after exercise',
+    'Balance your Subway meal with other daily food choices'
   ];
 
   return (
@@ -88,8 +94,11 @@ const NewWelcomeContent = () => {
       <div className="container-custom">
         {/* Main Introduction */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-gray-800">
+            Welcome to the Subway Nutrition Calculator 2025
+          </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Welcome to the #1 Subway Nutrition Calculator – your ultimate tool to track calories, carbs, protein, fat, sodium, and other nutrition facts for every Subway menu item. Whether you're creating a custom sandwich, salad, wrap, or protein bowl, this tool gives you real-time nutrition insights for every ingredient you add.
+            Your all-in-one tool for tracking calories, macros, carbs, sodium, and comprehensive nutrition facts for all your favorite Subway menu items. Whether you're customizing a sandwich, salad, protein bowl, or wrap, our powerful calculator helps you build your Subway meal with precise nutrition information in real time.
           </p>
         </div>
 
@@ -97,14 +106,11 @@ const NewWelcomeContent = () => {
         <div className="mb-16">
           <div className="flex items-center justify-center mb-6">
             <Search className="h-8 w-8 text-subway-green mr-3" />
-            <h2 className="text-3xl font-bold">Why Use Our Subway Calorie & Macro Calculator?</h2>
+            <h2 className="text-3xl font-bold">Why Use Our Subway Calorie Calculator?</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 mb-8 text-center">
-              Wondering how many calories are in your Subway sandwich? Trying to stay on track with your macros or meal goals?
-            </p>
-            <p className="text-lg text-gray-700 mb-8 text-center">
-              Our advanced Subway calorie calculator helps you:
+              Are you trying to count Subway calories or wondering how many calories are in your Subway sandwich? Our Subway calorie calculator makes it easy to:
             </p>
             <div className="bg-green-50 p-8 rounded-xl">
               <div className="space-y-4">
@@ -116,34 +122,35 @@ const NewWelcomeContent = () => {
                 ))}
               </div>
               <p className="text-center text-gray-600 mt-6 italic">
-                This tool is perfect for fitness enthusiasts, keto dieters, weight watchers, and anyone who wants to eat smarter at Subway.
+                Whether you're on a diet, counting macros, or just curious, our Subway sandwich calorie calculator is built for you.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Full Menu Coverage */}
+        {/* Complete Menu Coverage */}
         <div className="mb-16">
           <div className="flex items-center justify-center mb-6">
             <Utensils className="h-8 w-8 text-subway-green mr-3" />
-            <h2 className="text-3xl font-bold">Full Subway Menu Coverage – Customize Every Meal</h2>
+            <h2 className="text-3xl font-bold">Complete Menu Coverage for Every Subway Option</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 mb-8 text-center">
-              Our Subway calculator includes complete menu support, so you can customize:
+              Our comprehensive nutrition tool works seamlessly across Subway's entire menu range, supporting all popular items, sauces, and toppings with precise calculations for every customization.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {menuCoverage.map((item, index) => (
-                <div key={index} className="bg-blue-50 p-6 rounded-lg text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <Medal className="h-6 w-6 text-blue-600" />
+                <div key={index} className="bg-blue-50 p-6 rounded-lg">
+                  <div className="flex items-center mb-3">
+                    <Medal className="h-6 w-6 text-blue-600 mr-3" />
+                    <h3 className="font-semibold text-blue-800">{item.title}</h3>
                   </div>
-                  <p className="text-gray-700 font-medium">{item}</p>
+                  <p className="text-gray-700">{item.desc}</p>
                 </div>
               ))}
             </div>
             <p className="text-center text-gray-600 mt-8 italic font-semibold">
-              Every change updates your nutrition facts instantly – no more guesswork!
+              Every selection updates your meal's nutrition facts in real time, ensuring accuracy for every customization.
             </p>
           </div>
         </div>
@@ -152,41 +159,41 @@ const NewWelcomeContent = () => {
         <div className="mb-16">
           <div className="flex items-center justify-center mb-6">
             <Globe className="h-8 w-8 text-subway-green mr-3" />
-            <h2 className="text-3xl font-bold">Regional Support: USA, UK, Canada & More</h2>
+            <h2 className="text-3xl font-bold">Supports USA, UK, Canada & More</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 mb-8 text-center">
-              We support local Subway menus for accurate results:
+              Looking for regional data? We've got you covered:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-red-50 p-6 rounded-lg text-center">
                 <span className="text-2xl mb-2 block">🇺🇸</span>
-                <h3 className="font-semibold text-red-800 mb-2">Subway USA Nutrition Calculator</h3>
+                <h3 className="font-semibold text-red-800 mb-2">Subway Nutrition Calculator US</h3>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <span className="text-2xl mb-2 block">🇬🇧</span>
-                <h3 className="font-semibold text-blue-800 mb-2">Subway UK Calorie Calculator</h3>
+                <h3 className="font-semibold text-blue-800 mb-2">Subway Calorie Calculator UK</h3>
               </div>
               <div className="bg-red-50 p-6 rounded-lg text-center">
                 <span className="text-2xl mb-2 block">🇨🇦</span>
-                <h3 className="font-semibold text-red-800 mb-2">Subway Canada Menu Support</h3>
+                <h3 className="font-semibold text-red-800 mb-2">Subway Canada Nutrition Calculator</h3>
               </div>
             </div>
             <p className="text-center text-gray-600 mt-6 italic">
-              Wherever you are, get precise calorie and macro data for your region.
+              Whether you're in the U.S. or abroad, our Subway calculator supports local menus, calorie counts, and nutrition data for accuracy.
             </p>
           </div>
         </div>
 
-        {/* What You Can Track */}
+        {/* Smart Macro Calculator */}
         <div className="mb-16">
           <div className="flex items-center justify-center mb-6">
             <BarChart className="h-8 w-8 text-subway-green mr-3" />
-            <h2 className="text-3xl font-bold">What You Can Track with Our Subway Nutrition Tool</h2>
+            <h2 className="text-3xl font-bold">Smart & Accurate Subway Macro Calculator</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 mb-8 text-center">
-              Our Subway nutrition tracker gives you full control over:
+              Need detailed insights? Our Subway macros calculator breaks down your meal into:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {trackingFeatures.map((feature, index) => (
@@ -196,8 +203,8 @@ const NewWelcomeContent = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-600 mt-8">
-              You'll also get allergen data and tips for gluten-free, dairy-free, and vegan Subway options.
+            <p className="text-center text-gray-600 mt-8 font-semibold">
+              Perfect for meal prep, fitness goals, and macro tracking!
             </p>
           </div>
         </div>
@@ -205,50 +212,96 @@ const NewWelcomeContent = () => {
         {/* Build Your Sandwich */}
         <div className="mb-16">
           <div className="flex items-center justify-center mb-6">
-            <Utensils className="h-8 w-8 text-subway-green mr-3" />
+            <Sandwich className="h-8 w-8 text-subway-green mr-3" />
             <h2 className="text-3xl font-bold">Build Your Subway Sandwich Online</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 mb-8 text-center">
-              Use our Subway sandwich builder to:
+              Use our free Subway Sandwich Builder to add:
             </p>
             <div className="bg-subway-green text-white p-8 rounded-xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                  <span>Select your bread: Italian, multigrain, flatbread, etc.</span>
+                  <span>Your choice of bread (Italian, multigrain, flatbread)</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                  <span>Choose your protein: turkey, chicken, ham, steak, tuna, or plant-based</span>
+                  <span>Any meat (turkey, chicken, ham, steak)</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                  <span>Add veggies, sauces, and cheese</span>
+                  <span>Toppings, cheese, and sauces</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-                  <span>Watch your nutrition facts update live – calories, macros, and more</span>
+                  <span>Real-time nutrition facts</span>
                 </div>
               </div>
-              <div className="text-center mt-8">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <span className="flex items-center"><CheckCircle className="h-5 w-5 mr-2" /> No sign-up needed.</span>
-                  <span className="flex items-center"><CheckCircle className="h-5 w-5 mr-2" /> No app download.</span>
-                  <span className="flex items-center"><CheckCircle className="h-5 w-5 mr-2" /> 100% free.</span>
-                </div>
-              </div>
+              <p className="text-center mt-8 text-lg">
+                It's never been easier to calculate Subway sandwich calories before you order.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Popular Meal Categories */}
+        {/* Who Uses This Calculator */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-12 text-center">Popular Subway Meal Categories</h2>
+          <div className="flex items-center justify-center mb-6">
+            <Star className="h-8 w-8 text-subway-green mr-3" />
+            <h2 className="text-3xl font-bold">Who Uses This Subway Calculator?</h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              Our tool is designed for a wide range of users:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {userTypes.map((user, index) => (
+                <div key={index} className="flex items-center bg-gray-50 p-4 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-subway-green mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">{user}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* How to Use */}
+        <div className="mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <Calculator className="h-8 w-8 text-subway-green mr-3" />
+            <h2 className="text-3xl font-bold">How to Use the Subway Nutrition Calculator</h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              Getting started with our advanced calorie counter Subway tool is simple and intuitive:
+            </p>
+            <div className="bg-blue-50 p-8 rounded-xl">
+              <div className="space-y-4">
+                {howToSteps.map((step, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">
+                      {index + 1}
+                    </div>
+                    <span className="text-gray-700">{step}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-center text-gray-600 mt-8 italic text-lg">
+                Our comprehensive Subway calories calculator updates nutrition information in real-time as you make selections, ensuring accuracy for every customization.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Popular Menu Categories */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-12 text-center">Popular Subway Menu Categories</h2>
           
           {/* Low-Calorie Options */}
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-green-600">🟢 Low-Calorie Subway Options (Under 400 Calories)</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-center text-green-600">🟢 Low-Calorie Subway Options</h3>
+            <p className="text-center text-gray-700 mb-6">Discover sandwiches under 400 calories using our precise calculate Subway sandwich calories feature:</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {lowCalorieOptions.map((option, index) => (
                 <div key={index} className="bg-green-50 p-6 rounded-lg text-center">
@@ -262,6 +315,7 @@ const NewWelcomeContent = () => {
           {/* High-Protein Options */}
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-6 text-center text-blue-600">💪 High-Protein Subway Meals</h3>
+            <p className="text-center text-gray-700 mb-6">Perfect for fitness enthusiasts using our detailed Subway macros calculator:</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {highProteinMeals.map((meal, index) => (
                 <div key={index} className="bg-blue-50 p-6 rounded-lg text-center">
@@ -274,7 +328,8 @@ const NewWelcomeContent = () => {
 
           {/* Keto Options */}
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-purple-600">🥩 Keto & Low-Carb Subway Picks</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-center text-purple-600">🥩 Keto-Friendly Subway Options</h3>
+            <p className="text-center text-gray-700 mb-6">Use our specialized Subway carb counter and Subway sub calorie calculator to find low-carb meals:</p>
             <div className="bg-purple-50 p-8 rounded-xl">
               <div className="space-y-4">
                 {ketoOptions.map((option, index) => (
@@ -292,7 +347,7 @@ const NewWelcomeContent = () => {
         <div className="mb-16">
           <div className="flex items-center justify-center mb-6">
             <Zap className="h-8 w-8 text-subway-green mr-3" />
-            <h2 className="text-3xl font-bold">Advanced Features for Detailed Nutrition Tracking</h2>
+            <h2 className="text-3xl font-bold">Advanced Nutrition Features</h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -300,81 +355,40 @@ const NewWelcomeContent = () => {
               <div className="bg-yellow-50 p-6 rounded-xl">
                 <div className="flex items-center mb-4">
                   <Shield className="h-6 w-6 text-yellow-600 mr-3" />
-                  <h3 className="text-xl font-semibold">Allergen Info</h3>
+                  <h3 className="text-xl font-semibold">Allergen Information</h3>
                 </div>
-                <p className="text-gray-700 mb-4">Track options free of:</p>
+                <p className="text-gray-700 mb-4">Our detailed Subway nutrition information calculator includes comprehensive allergen data for:</p>
                 <div className="space-y-2">
-                  {allergenFree.map((allergen, index) => (
+                  {allergenInfo.map((allergen, index) => (
                     <div key={index} className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-yellow-600 mr-2" />
                       <span className="text-gray-700">{allergen}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-gray-600 mt-4 text-sm">Also includes vegan and vegetarian filters.</p>
               </div>
 
               {/* Sodium & Sugar Monitoring */}
               <div className="bg-red-50 p-6 rounded-xl">
                 <div className="flex items-center mb-4">
                   <Heart className="h-6 w-6 text-red-600 mr-3" />
-                  <h3 className="text-xl font-semibold">Sodium & Sugar Monitoring</h3>
+                  <h3 className="text-xl font-semibold">Sodium & Sugar Tracking</h3>
                 </div>
-                <p className="text-gray-700 mb-4">Avoid high-sodium and high-sugar ingredients like:</p>
+                <p className="text-gray-700 mb-4">The powerful Subway sodium calculator helps users monitoring salt intake identify:</p>
                 <div className="space-y-2 mb-4">
-                  <div className="text-gray-700">• Sweet onion sauce</div>
-                  <div className="text-gray-700">• Teriyaki chicken</div>
-                  <div className="text-gray-700">• Certain breads and condiments</div>
+                  <div className="text-gray-700">• Lowest sodium bread options</div>
+                  <div className="text-gray-700">• High-sodium ingredients to avoid</div>
+                  <div className="text-gray-700">• Healthier sauce alternatives</div>
+                  <div className="text-gray-700">• Fresh vegetable recommendations</div>
                 </div>
-                <p className="text-gray-600 text-sm">Our calculator shows healthier swaps in real-time.</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Who Uses This Calculator */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">Who Uses This Subway Calculator?</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {userTypes.map((user, index) => (
-                <div key={index} className="flex items-center bg-gray-50 p-4 rounded-lg">
-                  <CheckCircle className="h-5 w-5 text-subway-green mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">{user}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* How to Use */}
-        <div className="mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <Calculator className="h-8 w-8 text-subway-green mr-3" />
-            <h2 className="text-3xl font-bold">How to Use the Subway Calorie Calculator</h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-blue-50 p-8 rounded-xl">
-              <div className="space-y-4">
-                {steps.map((step, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <span className="text-gray-700 text-lg">{step}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-center text-gray-600 mt-8 italic text-lg">
-                You'll never have to ask, "How many calories are in my Subway sandwich?" again – our tool gives you instant answers.
-              </p>
             </div>
           </div>
         </div>
 
         {/* Tips for Healthier Meals */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-12 text-center">Tips for a Healthier Subway Meal</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Pro Tips for Healthier Subway Meals</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Maximize Nutrition */}
             <div className="bg-green-50 p-6 rounded-xl">
@@ -391,7 +405,7 @@ const NewWelcomeContent = () => {
 
             {/* Control Portions */}
             <div className="bg-blue-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4 text-blue-800">Control Portions</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-800">Portion Control</h3>
               <div className="space-y-3">
                 {portionTips.map((tip, index) => (
                   <div key={index} className="flex items-start">
@@ -417,58 +431,59 @@ const NewWelcomeContent = () => {
           </div>
         </div>
 
-        {/* Mobile Friendly */}
+        {/* Why Our Calculator Stands Out */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">Use It Anywhere – 100% Mobile Friendly</h2>
-          <div className="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl">
-            <p className="text-lg text-gray-700 mb-6 text-center">Our Subway nutrition tool is:</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Zap className="h-8 w-8 text-subway-green mx-auto mb-2" />
-                <p className="font-semibold">💨 Fast-loading</p>
+          <h2 className="text-3xl font-bold mb-6 text-center">Why Our Calculator Stands Out</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 p-6 rounded-xl text-center">
+                <Zap className="h-8 w-8 text-subway-green mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Real-Time Updates</h3>
+                <p className="text-gray-700 text-sm">Unlike static nutrition charts, our dynamic Subway calorie tracker provides instant calculations as you modify ingredients.</p>
               </div>
-              <div className="text-center">
-                <Shield className="h-8 w-8 text-subway-green mx-auto mb-2" />
-                <p className="font-semibold">📱 Touch-friendly</p>
+              
+              <div className="bg-gray-50 p-6 rounded-xl text-center">
+                <BarChart className="h-8 w-8 text-subway-green mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Comprehensive Database</h3>
+                <p className="text-gray-700 text-sm">We maintain the most complete database of Subway nutrition facts, including seasonal menu items and regional specialties.</p>
               </div>
-              <div className="text-center">
-                <Globe className="h-8 w-8 text-subway-green mx-auto mb-2" />
-                <p className="font-semibold">🌐 Works on all devices</p>
+              
+              <div className="bg-gray-50 p-6 rounded-xl text-center">
+                <Globe className="h-8 w-8 text-subway-green mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Mobile-Optimized Design</h3>
+                <p className="text-gray-700 text-sm">Access our versatile Subway Footlong calories calculator seamlessly on any device, with touch-friendly controls.</p>
               </div>
             </div>
-            <p className="text-center text-gray-600 mt-6 italic">
-              Perfect for checking your meal before you order at the store.
-            </p>
           </div>
         </div>
 
         {/* Final CTA */}
         <div className="text-center bg-subway-green text-white p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-4">Start Tracking Your Subway Meal Now – It's Free!</h2>
-          <p className="text-lg mb-6 opacity-90">Customize your meal now and get:</p>
+          <h2 className="text-3xl font-bold mb-4">Start Now – Free Subway Calorie Calculator</h2>
+          <p className="text-lg mb-6 opacity-90">Just pick your items, customize your toppings, and instantly get:</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-left max-w-2xl mx-auto">
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-              <span>✔️ Total Calories</span>
+              <span>✅ Total Calories</span>
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-              <span>✔️ Full Nutrition Label</span>
+              <span>✅ Full Nutrition Facts</span>
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-              <span>✔️ Macro Breakdown</span>
+              <span>✅ Macro Breakdown</span>
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" />
-              <span>✔️ Real-Time Ingredient Analysis</span>
+              <span>✅ Custom Meal Insights</span>
             </div>
           </div>
           <p className="text-lg mb-6 opacity-90">
-            Whether you're meal prepping, counting carbs, or just staying informed, our Subway Nutrition Calculator 2025 is your go-to tool.
+            Whether you're tracking Subway sandwich calories, Subway salad nutrition, or calculating your Subway macros, our calculator is the easiest way to get accurate results fast.
           </p>
           <p className="text-2xl font-bold">
-            🎯 Take control of your Subway meal today – and eat smarter with every bite!
+            🎯 Transform your Subway experience from guesswork to precision with the most comprehensive Subway nutrition calculator available online. Start building your perfect meal today and take control of your nutrition journey, one sandwich at a time.
           </p>
         </div>
       </div>

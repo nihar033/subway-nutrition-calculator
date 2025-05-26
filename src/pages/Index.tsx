@@ -19,10 +19,7 @@ const Index = () => {
       {/* Hero Section */}
       <Hero />
 
-      {/* New Welcome Content */}
-      <NewWelcomeContent />
-
-      {/* Calculator Section */}
+      {/* Calculator Section - moved right below Hero */}
       <section id="calculator-section" className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -35,6 +32,9 @@ const Index = () => {
           <CalculatorForm />
         </div>
       </section>
+
+      {/* New Welcome Content */}
+      <NewWelcomeContent />
       
       {/* Combined FAQ Section */}
       <FAQ />
