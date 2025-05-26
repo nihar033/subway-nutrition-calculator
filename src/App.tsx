@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,7 +16,6 @@ import PrivacyPolicyPage from "./pages/legal/PrivacyPolicy";
 import TermsOfServicePage from "./pages/legal/TermsOfService";
 import CookiePolicyPage from "./pages/legal/CookiePolicy";
 import DisclaimerPage from "./pages/legal/Disclaimer";
-import LowCalorieSubwaySandwiches from "./pages/blog/LowCalorieSubwaySandwiches";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,7 +36,6 @@ const App = () => (
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="/cookie-policy" element={<CookiePolicyPage />} />
             <Route path="/disclaimer" element={<DisclaimerPage />} />
-            <Route path="/blog/low-calorie-subway-sandwiches" element={<LowCalorieSubwaySandwiches />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>
