@@ -1,22 +1,12 @@
 
 import React from 'react';
-import { Calculator, Utensils, ArrowDown, Sandwich } from 'lucide-react';
+import { Calculator, Utensils, ArrowDown, Sandwich, Globe, Brain, ChefHat, Users, Lightbulb, Salad, Microscope, Trophy, TrendingUp, Star, Zap, Database, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const NewWelcomeContent = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container-custom">
-        {/* Welcome Introduction */}
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Welcome to the Subway Nutrition Calculator 2025
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Your all-in-one tool for tracking calories, macros, carbs, sodium, and comprehensive nutrition facts for all your favorite Subway menu items. Whether you're customizing a sandwich, salad, protein bowl, or wrap, our powerful calculator helps you build your Subway meal with precise nutrition information in real time.
-          </p>
-        </div>
-
         {/* Why Use Our Calculator Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -30,28 +20,28 @@ const NewWelcomeContent = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-2xl mb-3">🎯</div>
+            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-3">🎯</div>
               <h3 className="font-semibold mb-2">Calculate total calories in your Subway meal</h3>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-2xl mb-3">⚖️</div>
+            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-3">⚖️</div>
               <h3 className="font-semibold mb-2">Count carbs, protein, fat, and sodium</h3>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-2xl mb-3">📊</div>
+            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-3">📊</div>
               <h3 className="font-semibold mb-2">Analyze macro breakdowns with our Subway macro calculator</h3>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-2xl mb-3">🔧</div>
+            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-3">🔧</div>
               <h3 className="font-semibold mb-2">Customize items like bread, sauces, veggies, cheese, and meat</h3>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-2xl mb-3">⚡</div>
+            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-3">⚡</div>
               <h3 className="font-semibold mb-2">See results instantly for both 6-inch and Footlong subs</h3>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-2xl mb-3">💪</div>
+            <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow">
+              <div className="text-3xl mb-3">💪</div>
               <h3 className="font-semibold mb-2">Perfect for fitness enthusiasts and macro tracking</h3>
             </div>
           </div>
@@ -74,22 +64,22 @@ const NewWelcomeContent = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 border rounded-lg">
+            <div className="text-center p-6 border rounded-lg hover:border-subway-green transition-colors">
               <div className="text-3xl mb-3">🍞</div>
               <h3 className="font-semibold mb-2">Bread Options</h3>
               <p className="text-gray-600 text-sm">Italian, multigrain, flatbread, and more</p>
             </div>
-            <div className="text-center p-6 border rounded-lg">
+            <div className="text-center p-6 border rounded-lg hover:border-subway-green transition-colors">
               <div className="text-3xl mb-3">🥩</div>
               <h3 className="font-semibold mb-2">Proteins</h3>
               <p className="text-gray-600 text-sm">Turkey, chicken, ham, steak, tuna, and plant-based alternatives</p>
             </div>
-            <div className="text-center p-6 border rounded-lg">
+            <div className="text-center p-6 border rounded-lg hover:border-subway-green transition-colors">
               <div className="text-3xl mb-3">🥬</div>
               <h3 className="font-semibold mb-2">Toppings</h3>
               <p className="text-gray-600 text-sm">A variety of fresh vegetables and cheeses</p>
             </div>
-            <div className="text-center p-6 border rounded-lg">
+            <div className="text-center p-6 border rounded-lg hover:border-subway-green transition-colors">
               <div className="text-3xl mb-3">🍯</div>
               <h3 className="font-semibold mb-2">Sauces</h3>
               <p className="text-gray-600 text-sm">From classic mustard to sweet onion and beyond</p>
@@ -104,22 +94,23 @@ const NewWelcomeContent = () => {
         {/* Regional Support */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Globe className="h-8 w-8 text-subway-green mr-3" />
               🌎 Supports USA, UK, Canada & More
             </h2>
             <p className="text-xl text-gray-600">Looking for regional data? We've got you covered:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
+            <div className="text-center p-6 bg-blue-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🇺🇸</div>
               <h3 className="font-semibold">Subway Nutrition Calculator US</h3>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
+            <div className="text-center p-6 bg-blue-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🇬🇧</div>
               <h3 className="font-semibold">Subway Calorie Calculator UK</h3>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
+            <div className="text-center p-6 bg-blue-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🇨🇦</div>
               <h3 className="font-semibold">Subway Canada Nutrition Calculator</h3>
             </div>
@@ -133,7 +124,8 @@ const NewWelcomeContent = () => {
         {/* Smart Calculator Features */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Brain className="h-8 w-8 text-subway-green mr-3" />
               🧠 Smart & Accurate Subway Macro Calculator
             </h2>
             <p className="text-xl text-gray-600">Need detailed insights? Our Subway macros calculator breaks down your meal into:</p>
@@ -141,7 +133,7 @@ const NewWelcomeContent = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {['Protein', 'Carbs', 'Fats', 'Calories', 'Sodium', 'Sugars', 'Fiber'].map((nutrient) => (
-              <div key={nutrient} className="text-center p-4 bg-subway-green/10 rounded-lg">
+              <div key={nutrient} className="text-center p-4 bg-subway-green/10 rounded-lg hover:bg-subway-green/20 transition-colors">
                 <div className="font-semibold text-subway-green">{nutrient}</div>
               </div>
             ))}
@@ -155,26 +147,27 @@ const NewWelcomeContent = () => {
         {/* Build Your Sandwich Online */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <ChefHat className="h-8 w-8 text-subway-green mr-3" />
               👨‍🍳 Build Your Subway Sandwich Online
             </h2>
             <p className="text-xl text-gray-600">Use our free Subway Sandwich Builder to add:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold mb-4">🍞 Your choice of bread</h3>
               <p className="text-gray-600">Italian, multigrain, flatbread</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold mb-4">🥩 Any meat</h3>
               <p className="text-gray-600">Turkey, chicken, ham, steak</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold mb-4">🥬 Toppings, cheese, and sauces</h3>
               <p className="text-gray-600">Customize every ingredient</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="font-bold mb-4">📊 Real-time nutrition facts</h3>
               <p className="text-gray-600">See updates instantly</p>
             </div>
@@ -188,34 +181,35 @@ const NewWelcomeContent = () => {
         {/* Who Uses This Calculator */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Users className="h-8 w-8 text-subway-green mr-3" />
               📊 Who Uses This Subway Calculator?
             </h2>
             <p className="text-xl text-gray-600">Our tool is designed for a wide range of users:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="text-center p-6 bg-green-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">💪</div>
               <h3 className="font-semibold">Fitness enthusiasts</h3>
               <p className="text-gray-600 text-sm">Counting calories or macros</p>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
+            <div className="text-center p-6 bg-blue-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🥑</div>
               <h3 className="font-semibold">Keto or low-carb eaters</h3>
               <p className="text-gray-600 text-sm">Avoiding certain ingredients</p>
             </div>
-            <div className="text-center p-6 bg-red-50 rounded-lg">
+            <div className="text-center p-6 bg-red-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🩺</div>
               <h3 className="font-semibold">Diabetics</h3>
               <p className="text-gray-600 text-sm">Monitoring sugar and carbs</p>
             </div>
-            <div className="text-center p-6 bg-yellow-50 rounded-lg">
+            <div className="text-center p-6 bg-yellow-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">⚖️</div>
               <h3 className="font-semibold">Weight watchers</h3>
               <p className="text-gray-600 text-sm">Building low-calorie meals</p>
             </div>
-            <div className="text-center p-6 bg-purple-50 rounded-lg">
+            <div className="text-center p-6 bg-purple-50 rounded-lg hover:shadow-lg transition-shadow">
               <div className="text-2xl mb-3">🌱</div>
               <h3 className="font-semibold">Vegans or vegetarians</h3>
               <p className="text-gray-600 text-sm">Tracking protein and fiber</p>
@@ -227,39 +221,39 @@ const NewWelcomeContent = () => {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
-              <Utensils className="h-8 w-8 text-subway-green mr-3" />
+              <Lightbulb className="h-8 w-8 text-subway-green mr-3" />
               💡 How to Use the Subway Nutrition Calculator
             </h2>
             <p className="text-xl text-gray-600">Getting started with our advanced calorie counter Subway tool is simple and intuitive:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">1️⃣</div>
               <h3 className="font-bold mb-2">Select Your Base</h3>
               <p className="text-gray-600">Choose from sandwiches, salads, wraps, or protein bowls</p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">2️⃣</div>
               <h3 className="font-bold mb-2">Pick Your Bread</h3>
               <p className="text-gray-600">From classic Italian herbs & cheese to multigrain and flatbread options</p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">3️⃣</div>
               <h3 className="font-bold mb-2">Add Proteins</h3>
               <p className="text-gray-600">Select from turkey breast, chicken, roast beef, tuna, or plant-based alternatives</p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">4️⃣</div>
               <h3 className="font-bold mb-2">Customize Toppings</h3>
               <p className="text-gray-600">Add vegetables, cheese, and condiments while watching calories update</p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">5️⃣</div>
               <h3 className="font-bold mb-2">Compare Sizes</h3>
               <p className="text-gray-600">Toggle between 6-inch and Footlong portions instantly</p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">6️⃣</div>
               <h3 className="font-bold mb-2">Export Results</h3>
               <p className="text-gray-600">Save or share your custom meal's complete nutrition breakdown</p>
@@ -274,13 +268,14 @@ const NewWelcomeContent = () => {
         {/* Popular Menu Categories */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Salad className="h-8 w-8 text-subway-green mr-3" />
               🥗 Popular Subway Menu Categories
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-green-50 p-6 rounded-lg">
+            <div className="bg-green-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">🥬</span>
                 Low-Calorie Subway Options
@@ -292,7 +287,7 @@ const NewWelcomeContent = () => {
                 <li>• Oven Roasted Chicken breast: ~320 calories</li>
               </ul>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-blue-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">💪</span>
                 High-Protein Subway Meals
@@ -304,7 +299,7 @@ const NewWelcomeContent = () => {
                 <li>• Subway Club with extra meat: 39g protein</li>
               </ul>
             </div>
-            <div className="bg-yellow-50 p-6 rounded-lg">
+            <div className="bg-yellow-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">🥑</span>
                 Keto-Friendly Subway Options
@@ -322,13 +317,14 @@ const NewWelcomeContent = () => {
         {/* Advanced Features */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Microscope className="h-8 w-8 text-subway-green mr-3" />
               🔬 Advanced Nutrition Features
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">⚠️</span>
                 Allergen Information
@@ -341,7 +337,7 @@ const NewWelcomeContent = () => {
                 <li>• Vegetarian and vegan choices</li>
               </ul>
             </div>
-            <div className="bg-red-50 p-6 rounded-lg">
+            <div className="bg-red-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">🧂</span>
                 Sodium Tracking
@@ -354,7 +350,7 @@ const NewWelcomeContent = () => {
                 <li>• Fresh vegetable recommendations</li>
               </ul>
             </div>
-            <div className="bg-purple-50 p-6 rounded-lg">
+            <div className="bg-purple-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">🍯</span>
                 Sugar Content Analysis
@@ -373,24 +369,25 @@ const NewWelcomeContent = () => {
         {/* Why Our Calculator Stands Out */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Trophy className="h-8 w-8 text-subway-green mr-3" />
               🏆 Why Our Calculator Stands Out
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-subway-green/10 rounded-lg">
-              <div className="text-3xl mb-4">⚡</div>
+            <div className="text-center p-6 bg-subway-green/10 rounded-lg hover:shadow-lg transition-shadow">
+              <Zap className="h-12 w-12 text-subway-green mx-auto mb-4" />
               <h3 className="font-bold mb-2">Real-Time Updates</h3>
               <p className="text-gray-600">Unlike static nutrition charts, our dynamic Subway calorie tracker provides instant calculations as you modify ingredients, ensuring accuracy for every possible combination.</p>
             </div>
-            <div className="text-center p-6 bg-subway-green/10 rounded-lg">
-              <div className="text-3xl mb-4">📊</div>
+            <div className="text-center p-6 bg-subway-green/10 rounded-lg hover:shadow-lg transition-shadow">
+              <Database className="h-12 w-12 text-subway-green mx-auto mb-4" />
               <h3 className="font-bold mb-2">Comprehensive Database</h3>
               <p className="text-gray-600">We maintain the most complete database of Subway nutrition facts, including seasonal menu items, regional specialties, and limited-time offers.</p>
             </div>
-            <div className="text-center p-6 bg-subway-green/10 rounded-lg">
-              <div className="text-3xl mb-4">📱</div>
+            <div className="text-center p-6 bg-subway-green/10 rounded-lg hover:shadow-lg transition-shadow">
+              <Smartphone className="h-12 w-12 text-subway-green mx-auto mb-4" />
               <h3 className="font-bold mb-2">Mobile-Optimized Design</h3>
               <p className="text-gray-600">Access our versatile Subway Footlong calories calculator seamlessly on any device, with touch-friendly controls and fast loading times.</p>
             </div>
@@ -400,27 +397,28 @@ const NewWelcomeContent = () => {
         {/* Track Your Journey */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <TrendingUp className="h-8 w-8 text-subway-green mr-3" />
               📈 Track Your Subway Journey
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border-2 border-subway-green/20 p-6 rounded-lg">
+            <div className="bg-white border-2 border-subway-green/20 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">📅</span>
                 Daily Meal Planning
               </h3>
               <p className="text-gray-600">Use our versatile Subway sandwich calorie calculator to plan balanced meals that fit your daily nutrition goals. Whether you're aiming for 1,200 calories or 2,500 calories per day, create Subway meals that complement your overall diet plan.</p>
             </div>
-            <div className="bg-white border-2 border-subway-green/20 p-6 rounded-lg">
+            <div className="bg-white border-2 border-subway-green/20 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">📝</span>
                 Weekly Meal Prep
               </h3>
               <p className="text-gray-600">Plan multiple Subway meals for the week using our comprehensive build your Subway meal feature. Compare different combinations including wraps, protein bowls, and salads to add variety while maintaining consistent nutrition targets.</p>
             </div>
-            <div className="bg-white border-2 border-subway-green/20 p-6 rounded-lg">
+            <div className="bg-white border-2 border-subway-green/20 p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="mr-2">📊</span>
                 Progress Monitoring
@@ -441,7 +439,7 @@ const NewWelcomeContent = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
             <div className="p-6">
               <div className="flex items-center mb-3">
                 <span className="text-2xl mr-2">🏆</span>
@@ -467,7 +465,8 @@ const NewWelcomeContent = () => {
         {/* Pro Tips */}
         <div className="mb-16 bg-subway-green/5 py-12 px-8 rounded-xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center">
+              <Star className="h-8 w-8 text-subway-green mr-3" />
               🌟 Pro Tips for Healthier Subway Meals
             </h2>
           </div>
@@ -534,7 +533,7 @@ const NewWelcomeContent = () => {
             </div>
           </div>
 
-          <p className="text-lg opacity-90">
+          <p className="text-lg opacity-90 mb-4">
             Whether you're tracking Subway sandwich calories, Subway salad nutrition, or calculating your Subway macros, our calculator is the easiest way to get accurate results fast.
           </p>
 
