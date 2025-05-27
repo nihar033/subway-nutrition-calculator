@@ -6,9 +6,22 @@ import CalculatorForm from '@/components/calculator/CalculatorForm';
 import HomepageSchema from '@/components/SEO/HomepageSchema';
 import FAQSchema from '@/components/SEO/FAQSchema';
 import CalculatorSchema from '@/components/SEO/CalculatorSchema';
-import NewWelcomeContent from '@/components/home/NewWelcomeContent';
 import CalculatorHighlight from '@/components/home/CalculatorHighlight';
 import SmoothScroll from '@/components/ui/smooth-scroll';
+import WhyUseCalculator from '@/components/home/content/WhyUseCalculator';
+import CompleteMenuCoverage from '@/components/home/content/CompleteMenuCoverage';
+import RegionalSupport from '@/components/home/content/RegionalSupport';
+import SmartCalculatorFeatures from '@/components/home/content/SmartCalculatorFeatures';
+import SandwichBuilder from '@/components/home/content/SandwichBuilder';
+import WhoUsesCalculator from '@/components/home/content/WhoUsesCalculator';
+import HowToUse from '@/components/home/content/HowToUse';
+import PopularMenuCategories from '@/components/home/content/PopularMenuCategories';
+import AdvancedFeatures from '@/components/home/content/AdvancedFeatures';
+import WhyStandsOut from '@/components/home/content/WhyStandsOut';
+import TrackJourney from '@/components/home/content/TrackJourney';
+import BlogSection from '@/components/home/content/BlogSection';
+import ProTips from '@/components/home/content/ProTips';
+import CTASection from '@/components/home/content/CTASection';
 
 const Index = () => {
   const scrollToCalculator = () => {
@@ -61,8 +74,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New Welcome Content */}
-      <NewWelcomeContent />
+      {/* All Content Sections */}
+      <WhyUseCalculator />
+      <CompleteMenuCoverage />
+      <RegionalSupport />
+      <SmartCalculatorFeatures />
+      <SandwichBuilder />
+      <WhoUsesCalculator />
+      <HowToUse />
+      <PopularMenuCategories />
+      <AdvancedFeatures />
+      <WhyStandsOut />
+      <TrackJourney />
+      <BlogSection />
+      <ProTips />
+      <CTASection />
       
       {/* Combined FAQ Section */}
       <FAQ />
