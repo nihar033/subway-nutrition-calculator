@@ -22,6 +22,15 @@ const BlogSection = () => {
       author: "Fitness Team",
       link: "/blog/subway-macros-guide",
       image: "📊"
+    },
+    {
+      id: 3,
+      title: "Does Subway Have Gluten-Free Bread? (2025 Guide)",
+      excerpt: "Complete guide to Subway's gluten-free options, safety concerns, and how to order safely for celiac disease and gluten sensitivity.",
+      readTime: "8 min read",
+      author: "Health Team",
+      link: "/blog/subway-gluten-free-bread",
+      image: "🌾"
     }
   ];
 
@@ -38,7 +47,7 @@ const BlogSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
             {blogPosts.map((post) => (
               <div key={post.id} className="bg-gradient-to-br from-gray-50 to-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="p-6">

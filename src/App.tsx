@@ -19,6 +19,7 @@ import CookiePolicyPage from "./pages/legal/CookiePolicy";
 import DisclaimerPage from "./pages/legal/Disclaimer";
 import LowCalorieSubwaySandwiches from "./pages/blog/LowCalorieSubwaySandwiches";
 import SubwayMacrosGuide from "./pages/blog/SubwayMacrosGuide";
+import SubwayGlutenFreeBread from "./pages/blog/SubwayGlutenFreeBread";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/disclaimer" element={<DisclaimerPage />} />
             <Route path="/blog/low-calorie-subway-sandwiches" element={<LowCalorieSubwaySandwiches />} />
             <Route path="/blog/subway-macros-guide" element={<SubwayMacrosGuide />} />
+            <Route path="/blog/subway-gluten-free-bread" element={<SubwayGlutenFreeBread />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>
