@@ -34,6 +34,7 @@ import BuyMeCoffeePopup from './BuyMeCoffeePopup';
 const CalculatorForm = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [showCoffeePopup, setShowCoffeePopup] = useState<boolean>(false);
+  const [hasShownInitialPopup, setHasShownInitialPopup] = useState<boolean>(false);
   const [selection, setSelection] = useState<CalculatorSelection>({
     mealType: 'sandwich',
     size: '6-inch',
@@ -57,6 +58,18 @@ const CalculatorForm = () => {
     cholesterol: 0,
     allergens: [],
   });
+
+  // Show initial popup when component mounts
+  React.useEffect(() => {
+    if (!hasShownInitialPopup) {
+      const timer = setTimeout(() => {
+        setShowCoffeePopup(true);
+        setHasShownInitialPopup(true);
+      }, 3000); // Show after 3 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [hasShownInitialPopup]);
 
   const steps = [
     { id: 1, name: 'Meal Type', icon: <Utensils className="w-4 h-4 sm:w-5 sm:h-5" /> },
