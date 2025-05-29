@@ -29,7 +29,7 @@ const BuyMeCoffeePopup: React.FC<BuyMeCoffeePopupProps> = ({ isOpen, onClose }) 
           </div>
           
           <DialogTitle className="text-2xl font-bold text-gray-800">
-            Enjoying the Calculator?
+            ☕ Support me !
           </DialogTitle>
           
           <DialogDescription className="text-gray-600 text-base leading-relaxed">
