@@ -8,6 +8,15 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
+      title: "Complete Subway Menu with Prices 2025",
+      excerpt: "Find current Subway menu prices for all items including sandwiches, wraps, bowls, breakfast, and desserts. Updated with calories and pricing.",
+      readTime: "6 min read",
+      author: "Menu Team",
+      link: "/blog/subway-menu-prices",
+      image: "💰"
+    },
+    {
+      id: 2,
       title: "Low-Calorie Subway Sandwiches: Your Complete Guide",
       excerpt: "Discover the best low-calorie options at Subway and learn how to customize your order for maximum nutrition with minimal calories.",
       readTime: "5 min read",
@@ -16,7 +25,7 @@ const BlogPage = () => {
       image: "🥗"
     },
     {
-      id: 2,
+      id: 3,
       title: "Subway Macros Explained: Track Protein, Carbs & Fat",
       excerpt: "Master your macros with our comprehensive guide to tracking protein, carbohydrates, and fat in your Subway meals.",
       readTime: "7 min read",
@@ -25,7 +34,7 @@ const BlogPage = () => {
       image: "📊"
     },
     {
-      id: 3,
+      id: 4,
       title: "Does Subway Have Gluten-Free Bread? (2025 Guide)",
       excerpt: "Complete guide to Subway's gluten-free options, safety concerns, and how to order safely for celiac disease and gluten sensitivity.",
       readTime: "8 min read",
@@ -63,7 +72,7 @@ const BlogPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {blogPosts.map((post) => (
               <div key={post.id} className="bg-gradient-to-br from-gray-50 to-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="p-6">
