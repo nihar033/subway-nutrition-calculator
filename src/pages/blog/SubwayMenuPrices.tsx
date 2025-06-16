@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -168,6 +167,214 @@ const SubwayMenuPrices = () => {
             </div>
           </div>
 
+          {/* New introductory content */}
+          <div className="mb-12 prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              If you're a fan of fresh sandwiches, healthy eating, or quick bites on the go, chances are you've stepped into a Subway restaurant. But what if you want to explore the full Subway menu with prices, toppings, and nutritional details before you order? That's where this guide comes in. Whether you're hunting for the price of the new footlong cookie, curious about calories, or wondering if Subway has a secret menu, we've got you covered.
+            </p>
+            
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              For personalized nutrition breakdowns and menu information, visit{' '}
+              <Link to="/" className="text-subway-green hover:underline font-semibold">
+                subway-nutrition-calculator.com
+              </Link>
+              , your trusted resource for building better meals at Subway.
+            </p>
+
+            <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-subway-green">🍽️ Subway Menu with Prices: What to Expect</h3>
+              <p className="text-gray-700 mb-4">
+                Subway offers a diverse range of subs, wraps, bowls, salads, and sides. The prices vary slightly depending on your location, but here's a general idea:
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex justify-between">
+                  <span>6-Inch Subs:</span>
+                  <span className="font-semibold">Starting at $4.99</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Footlong Subs:</span>
+                  <span className="font-semibold">Starting at $7.99</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Signature Wraps:</span>
+                  <span className="font-semibold">Around $7.99</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Protein Bowls:</span>
+                  <span className="font-semibold">$8.99 and up</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Salads:</span>
+                  <span className="font-semibold">Starting at $6.79</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Footlong Cookie:</span>
+                  <span className="font-semibold">About $5.00 (availability may vary)</span>
+                </li>
+              </ul>
+              <p className="text-gray-700 mt-4">
+                Want to see a more accurate menu? Our tool at{' '}
+                <Link to="/" className="text-subway-green hover:underline font-semibold">
+                  subway-nutrition-calculator.com
+                </Link>
+                {' '}helps you browse the Subway menu without ordering and get pricing based on your area.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-yellow-50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-subway-green">🥒 Toppings Galore: What Can You Add to Your Sub?</h3>
+              <p className="text-gray-700 mb-4">
+                The customization options are what make Subway a fan favorite. Here are just a few of the toppings you can expect:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Veggies:</h4>
+                  <p className="text-gray-700 text-sm">Lettuce, Spinach, Tomato, Cucumber, Pickles, Peppers, Red Onions</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Proteins:</h4>
+                  <p className="text-gray-700 text-sm">Turkey, Roast Beef, Chicken Strips, Tuna, Meatballs, Steak</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Cheeses:</h4>
+                  <p className="text-gray-700 text-sm">American, Provolone, Pepperjack, Shredded Mozzarella</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Sauces:</h4>
+                  <p className="text-gray-700 text-sm">Mayo, Mustard, Chipotle Southwest, Ranch, Buffalo, Vinaigrette</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mt-4">
+                Explore all available Subway menu toppings with nutrition and calorie details on our website.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-subway-green">📈 Nutrition Counts: Know Before You Order</h3>
+              <p className="text-gray-700 mb-4">
+                Subway is popular for being one of the healthier fast food options. But not all sandwiches are created equal. A 6-inch Turkey Breast sub has around 280 calories, while a footlong Italian B.M.T. can go over 800.
+              </p>
+              <p className="text-gray-700 mb-2">
+                With{' '}
+                <Link to="/" className="text-subway-green hover:underline font-semibold">
+                  subway-nutrition-calculator.com
+                </Link>
+                , you can:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Check Subway menu nutrition by customizing your sandwich</li>
+                <li>• See the Subway menu calories by size, bread, meat, cheese, and sauce</li>
+                <li>• Download or view the Subway menu PDF to compare meals at a glance</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-subway-green">🍎 Does Subway Have a Secret Menu?</h3>
+              <p className="text-gray-700 mb-4">
+                It might not be official, but yes—there are a few hidden items! Some of the Subway secret menu favorites include:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4 mb-4">
+                <li>• The "Old Cut" sub style</li>
+                <li>• The Pizza Sub (sometimes still available on request)</li>
+                <li>• The "Wing Effect" sandwich with extra sauce on the side</li>
+              </ul>
+              <p className="text-gray-700">
+                Just ask the staff nicely and you might get lucky!
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-subway-green">🔍 View Subway Menu Without Ordering</h3>
+              <p className="text-gray-700 mb-4">
+                Sometimes you just want to browse the menu without placing an order. Good news: you can use our tool at{' '}
+                <Link to="/" className="text-subway-green hover:underline font-semibold">
+                  subway-nutrition-calculator.com
+                </Link>
+                {' '}to:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• View the Subway menu without ordering</li>
+                <li>• See live updates on prices and item availability</li>
+                <li>• Customize your meal with toppings and instantly view nutrition info</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-subway-green">🌐 FAQs – Subway Menu, Prices & Nutrition</h3>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ What is the price of a footlong cookie at Subway?</h4>
+                  <p className="text-gray-700">The Subway footlong cookie price is about $5, though this may vary by region. It's a sweet treat worth trying if your local store has it!</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ How can I view the Subway menu without ordering?</h4>
+                  <p className="text-gray-700">
+                    Visit{' '}
+                    <Link to="/" className="text-subway-green hover:underline font-semibold">
+                      subway-nutrition-calculator.com
+                    </Link>
+                    {' '}to explore the full Subway menu without needing to place an order. It's simple, fast, and doesn't require creating an account.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ Does Subway have a secret menu?</h4>
+                  <p className="text-gray-700">Yes, there are unofficial secret menu items like the Pizza Sub and "Old Cut" style. Some stores still honor these requests!</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ Where can I find the Subway menu with prices?</h4>
+                  <p className="text-gray-700">
+                    Use our platform at{' '}
+                    <Link to="/" className="text-subway-green hover:underline font-semibold">
+                      subway-nutrition-calculator.com
+                    </Link>
+                    {' '}to see updated Subway menu and prices in your region.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ How do I check Subway nutrition before visiting?</h4>
+                  <p className="text-gray-700">
+                    Easily customize and calculate your sandwich's nutritional value at{' '}
+                    <Link to="/" className="text-subway-green hover:underline font-semibold">
+                      subway-nutrition-calculator.com
+                    </Link>
+                    .
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ Can I download a Subway menu PDF?</h4>
+                  <p className="text-gray-700">Yes, many Subway regions offer downloadable PDFs. Or use our website for an interactive, mobile-friendly experience.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ What are all the toppings I can add to my Subway sandwich?</h4>
+                  <p className="text-gray-700">You can choose from dozens of Subway menu toppings, including meats, cheeses, veggies, and sauces.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ How many calories are in a Subway sub?</h4>
+                  <p className="text-gray-700">
+                    That depends on your build! A typical 6-inch sub ranges from 250 to 450 calories. Visit{' '}
+                    <Link to="/" className="text-subway-green hover:underline font-semibold">
+                      subway-nutrition-calculator.com
+                    </Link>
+                    {' '}for a breakdown.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">❓ Are there healthy options at Subway?</h4>
+                  <p className="text-gray-700">Absolutely. Choose lean proteins, load up on veggies, and go easy on sauces. Use our calculator for smart choices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Keep all existing menu sections */}
           <MenuSection title="Featured Combos" items={featuredCombos} emoji="🌟" />
           <MenuSection title="Classic Sandwiches" items={classicSandwiches} emoji="🥪" />
           <MenuSection title="Sidekicks" items={sidekicks} emoji="🍟" />
@@ -177,7 +384,7 @@ const SubwayMenuPrices = () => {
           <MenuSection title="Desserts" items={desserts} emoji="🍪" />
           <MenuSection title="Drinks" items={drinks} emoji="🥤" />
 
-          {/* Pro Tips Section */}
+          {/* Keep existing pro tips and final note sections */}
           <div className="mt-12 bg-gradient-to-r from-subway-green/10 to-green-50 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-4 text-subway-green">💡 Money-Saving Tips</h3>
             <ul className="space-y-3 text-gray-700">
@@ -200,7 +407,6 @@ const SubwayMenuPrices = () => {
             </ul>
           </div>
 
-          {/* Final Note */}
           <div className="mt-12 text-center bg-white p-8 rounded-lg shadow-sm border">
             <h3 className="text-2xl font-bold mb-4">📍 Important Note</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
