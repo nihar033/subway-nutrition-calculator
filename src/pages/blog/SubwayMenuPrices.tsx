@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const SubwayMenuPrices = () => {
   const featuredCombos = [
@@ -109,6 +110,58 @@ const SubwayMenuPrices = () => {
     { name: "Coca-Cola Classic (Fountain)", price: "$3.49", calories: "370 Cal" }
   ];
 
+  const faqData = [
+    {
+      question: "What is the price of a footlong cookie at Subway?",
+      answer: "The Subway footlong cookie price is about $5.99, though this may vary by region. It's a sweet treat worth trying if your local store has it!"
+    },
+    {
+      question: "How can I view the Subway menu without ordering?",
+      answer: "Visit subway-nutrition-calculator.com to explore the full Subway menu without needing to place an order. It's simple, fast, and doesn't require creating an account."
+    },
+    {
+      question: "Does Subway have a secret menu?",
+      answer: "Yes, there are unofficial secret menu items like the Pizza Sub and 'Old Cut' style. Some stores still honor these requests!"
+    },
+    {
+      question: "Where can I find the Subway menu with prices?",
+      answer: "Use our platform at subway-nutrition-calculator.com to see updated Subway menu and prices in your region."
+    },
+    {
+      question: "How do I check Subway nutrition before visiting?",
+      answer: "Easily customize and calculate your sandwich's nutritional value at subway-nutrition-calculator.com."
+    },
+    {
+      question: "Can I download a Subway menu PDF?",
+      answer: "Yes, many Subway regions offer downloadable PDFs. Or use our website for an interactive, mobile-friendly experience."
+    },
+    {
+      question: "What are all the toppings I can add to my Subway sandwich?",
+      answer: "You can choose from dozens of Subway menu toppings, including meats, cheeses, veggies, and sauces."
+    },
+    {
+      question: "How many calories are in a Subway sub?",
+      answer: "That depends on your build! A typical 6-inch sub ranges from 250 to 450 calories. Visit subway-nutrition-calculator.com for a breakdown."
+    },
+    {
+      question: "Are there healthy options at Subway?",
+      answer: "Absolutely. Choose lean proteins, load up on veggies, and go easy on sauces. Use our calculator for smart choices."
+    }
+  ];
+
+  const faqSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   const MenuSection = ({ title, items, emoji }: { title: string; items: { name: string; price: string; calories: string; }[]; emoji: string }) => (
     <section className="mb-12">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
@@ -144,6 +197,9 @@ const SubwayMenuPrices = () => {
         <title>Complete Subway Menu with Prices 2025 | All Items & Calories</title>
         <meta name="description" content="Complete Subway menu with prices for 2025. Find prices for all sandwiches, wraps, bowls, breakfast items, desserts, and drinks. Updated with calories and current pricing." />
         <meta name="keywords" content="subway menu prices, subway prices 2025, subway menu with calories, subway sandwich prices, subway wrap prices" />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchemaData)}
+        </script>
       </Helmet>
 
       <div className="container-custom py-12">
@@ -167,7 +223,6 @@ const SubwayMenuPrices = () => {
             </div>
           </div>
 
-          {/* New introductory content */}
           <div className="mb-12 prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               If you're a fan of fresh sandwiches, healthy eating, or quick bites on the go, chances are you've stepped into a Subway restaurant. But what if you want to explore the full Subway menu with prices, toppings, and nutritional details before you order? That's where this guide comes in. Whether you're hunting for the price of the new footlong cookie, curious about calories, or wondering if Subway has a secret menu, we've got you covered.
@@ -374,7 +429,13 @@ const SubwayMenuPrices = () => {
             </div>
           </div>
 
-          {/* Keep all existing menu sections */}
+          {/* New heading before menu sections */}
+          <div className="mb-8">
+            <h2 className="text-4xl font-bold text-center text-subway-green mb-8">
+              📋 List of Subway Menu with Prices
+            </h2>
+          </div>
+
           <MenuSection title="Featured Combos" items={featuredCombos} emoji="🌟" />
           <MenuSection title="Classic Sandwiches" items={classicSandwiches} emoji="🥪" />
           <MenuSection title="Sidekicks" items={sidekicks} emoji="🍟" />
@@ -384,7 +445,6 @@ const SubwayMenuPrices = () => {
           <MenuSection title="Desserts" items={desserts} emoji="🍪" />
           <MenuSection title="Drinks" items={drinks} emoji="🥤" />
 
-          {/* Keep existing pro tips and final note sections */}
           <div className="mt-12 bg-gradient-to-r from-subway-green/10 to-green-50 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-4 text-subway-green">💡 Money-Saving Tips</h3>
             <ul className="space-y-3 text-gray-700">
@@ -405,6 +465,26 @@ const SubwayMenuPrices = () => {
                 <span>Combo meals with chips and drinks often provide better value than ordering separately</span>
               </li>
             </ul>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-3xl font-bold mb-8 text-center text-subway-green">
+              ❓ Frequently Asked Questions
+            </h3>
+            <Card className="p-6">
+              <Accordion type="single" collapsible className="w-full">
+                {faqData.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </Card>
           </div>
 
           <div className="mt-12 text-center bg-white p-8 rounded-lg shadow-sm border">
