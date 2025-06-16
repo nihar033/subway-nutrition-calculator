@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, User } from 'lucide-react';
+import { ArrowRight, Clock, User, ArrowLeft } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
-const BlogSection = () => {
+const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
@@ -35,19 +36,34 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container-custom">
-        <div className="bg-white py-12 px-8 rounded-xl shadow-md">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              📖 Latest Subway Nutrition Tips & Guides
-            </h2>
-            <p className="text-xl text-gray-600">
-              Discover expert tips, nutrition guides, and healthy meal ideas to make the most of your Subway experience.
-            </p>
+    <>
+      <Helmet>
+        <title>Subway Nutrition Blog | Tips, Guides & Healthy Meal Ideas</title>
+        <meta name="description" content="Discover expert tips, nutrition guides, and healthy meal ideas to make the most of your Subway experience. Read our latest articles on low-calorie options, macros, and gluten-free choices." />
+      </Helmet>
+
+      <div className="container-custom py-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8">
+            <Link 
+              to="/" 
+              className="inline-flex items-center text-subway-green hover:text-subway-green/80 transition-colors mb-4"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Calculator
+            </Link>
+            
+            <div className="text-center">
+              <h1 className="text-4xl font-bold mb-4">
+                📖 Subway Nutrition Blog
+              </h1>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Discover expert tips, nutrition guides, and healthy meal ideas to make the most of your Subway experience.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {blogPosts.map((post) => (
               <div key={post.id} className="bg-gradient-to-br from-gray-50 to-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="p-6">
@@ -56,9 +72,9 @@ const BlogSection = () => {
                     <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium">Featured</span>
                   </div>
                   
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">
+                  <h2 className="text-xl font-bold mb-3 text-gray-900">
                     {post.title}
-                  </h3>
+                  </h2>
                   
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {post.excerpt}
@@ -87,19 +103,15 @@ const BlogSection = () => {
             ))}
           </div>
 
-          <div className="text-center">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center bg-subway-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-subway-green/90 transition-colors"
-            >
-              View All Articles
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+          <div className="text-center mt-12">
+            <p className="text-gray-600">
+              More articles coming soon! Check back regularly for new nutrition tips and healthy eating guides.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default BlogSection;
+export default BlogPage;

@@ -9,6 +9,7 @@ import MainLayout from "@/components/layout/MainLayout";
 // Pages
 import HomePage from "./pages/Index";
 import MenuPage from "./pages/Menu";
+import BlogPage from "./pages/Blog";
 import AboutPage from "./pages/About";
 import NutritionDatabasePage from "./pages/NutritionDatabase";
 import FAQPage from "./pages/FAQ";
@@ -32,6 +33,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/nutrition-database" element={<NutritionDatabasePage />} />
             <Route path="/faq" element={<FAQPage />} />
