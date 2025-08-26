@@ -48,12 +48,12 @@ const Index = () => {
       </div>
 
       {/* Calculator Section - moved right below Hero */}
-      <section id="calculator-section" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section id="calculator-section" className="bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-subway-green/5 to-subway-yellow/5"></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-subway-green to-subway-yellow"></div>
         
-        <div className="container-custom relative z-10">
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8 md:p-12 backdrop-blur-sm">
+        <div className="w-full relative z-10">
+          <div className="bg-white border-0 shadow-none">
             <CalculatorForm />
           </div>
         </div>
