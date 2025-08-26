@@ -366,8 +366,8 @@ const CalculatorForm = () => {
           )}
         </div>
 
-        {/* Mobile-optimized sticky footer navigation */}
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-50 backdrop-blur-sm bg-white/95 md:relative md:bg-transparent md:border-t-0 md:backdrop-blur-none">
+        {/* Navigation buttons - positioned below content */}
+        <div className="bg-white border-t border-gray-200 p-4 mt-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center gap-4">
               <Button 
