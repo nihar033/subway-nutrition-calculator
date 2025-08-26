@@ -131,8 +131,8 @@ const CalculatorForm = () => {
   return (
     <>
       <div className="calculator-box w-full max-w-none sm:max-w-7xl mx-auto overflow-hidden border-0">
-        <div className="bg-gradient-to-r from-subway-green/10 to-subway-yellow/10 p-4 sm:p-6 rounded-t-xl">
-          <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 text-gray-800">Build Your Custom Subway Meal Online</h2>
+        <div className="bg-gradient-to-r from-subway-green/10 to-subway-yellow/10 px-6 py-4 sm:p-6 rounded-t-xl">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-4 text-gray-800">Build Your Custom Subway Meal Online</h2>
           <Progress value={progressPercentage} className="h-2 bg-gray-200" />
           
           {/* Desktop Step Navigation */}
