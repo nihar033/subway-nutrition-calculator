@@ -130,7 +130,7 @@ const CalculatorForm = () => {
 
   return (
     <>
-      <Card className="calculator-box w-full max-w-4xl mx-auto overflow-hidden border-0 shadow-lg">
+      <div className="calculator-box w-full max-w-none sm:max-w-6xl mx-auto overflow-hidden border-0 shadow-none sm:shadow-lg sm:rounded-lg">
         <div className="bg-gradient-to-r from-subway-green/10 to-subway-yellow/10 p-4 sm:p-6 rounded-t-xl">
           <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 text-gray-800">Build Your Custom Subway Meal Online</h2>
           <Progress value={progressPercentage} className="h-2 bg-gray-200" />
@@ -356,7 +356,7 @@ const CalculatorForm = () => {
             </Button>
           </div>
         </div>
-      </Card>
+      </div>
 
       <BuyMeCoffeePopup 
         isOpen={showCoffeePopup} 
