@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -47,7 +48,14 @@ const Contact = () => {
   }
 
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>Contact Us | Subway Nutrition Calculator Support</title>
+        <meta name="description" content="Get in touch with the Subway Nutrition Calculator team. Send us your questions, feedback, or suggestions. We're here to help you make healthier choices." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/contact" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom">
         {/* Hero Section */}
         <div className="mb-12 text-center">
@@ -198,7 +206,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

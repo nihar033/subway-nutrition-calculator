@@ -1,9 +1,17 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Disclaimer = () => {
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>Disclaimer | Subway Nutrition Calculator</title>
+        <meta name="description" content="Important disclaimer information about the Subway Nutrition Calculator. Understand limitations and accuracy of nutrition data provided." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/legal/disclaimer" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Disclaimer</h1>
@@ -95,7 +103,8 @@ const Disclaimer = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

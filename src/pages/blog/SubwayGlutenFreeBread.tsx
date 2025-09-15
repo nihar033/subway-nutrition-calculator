@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 import BlogPostSchema from '@/components/SEO/BlogPostSchema';
 
 const SubwayGlutenFreeBread = () => {
@@ -14,6 +15,10 @@ const SubwayGlutenFreeBread = () => {
         datePublished="2025-01-15"
         dateModified="2025-01-15"
       />
+
+      <Helmet>
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/blog/subway-gluten-free-bread" />
+      </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-4xl">

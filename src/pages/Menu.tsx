@@ -128,6 +128,7 @@ const MenuPage = () => {
       <Helmet>
         <title>Subway Menu with Prices 2025 (With Pictures) | Complete Guide</title>
         <meta name="description" content="Find the latest Subway menu prices for 2025. Complete guide with sandwiches, wraps, protein bowls, and catering options. Updated prices and pictures included." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/menu" />
         <script type="application/ld+json">
           {JSON.stringify(menuSchema)}
         </script>

@@ -49,6 +49,7 @@ const BlogPage = () => {
       <Helmet>
         <title>Subway Nutrition Blog | Tips, Guides & Healthy Meal Ideas</title>
         <meta name="description" content="Discover expert tips, nutrition guides, and healthy meal ideas to make the most of your Subway experience. Read our latest articles on low-calorie options, macros, and gluten-free choices." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/blog" />
       </Helmet>
 
       <div className="container-custom py-12">

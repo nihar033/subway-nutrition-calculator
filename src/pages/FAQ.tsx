@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   Accordion,
   AccordionContent,
@@ -107,8 +108,13 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="py-12">
-      <FAQSchema />
+    <>
+      <Helmet>
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/faq" />
+      </Helmet>
+      
+      <div className="py-12">
+        <FAQSchema />
       <div className="container-custom">
         {/* Hero Section */}
         <div className="mb-12 text-center">
@@ -216,7 +222,8 @@ const FAQ = () => {
           </a>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

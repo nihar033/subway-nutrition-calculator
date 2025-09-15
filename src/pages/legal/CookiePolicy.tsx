@@ -1,9 +1,17 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const CookiePolicy = () => {
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>Cookie Policy | Subway Nutrition Calculator</title>
+        <meta name="description" content="Learn about our cookie policy and how we use cookies to improve your experience on the Subway Nutrition Calculator website." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/legal/cookie-policy" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Cookie Policy</h1>
@@ -103,7 +111,8 @@ const CookiePolicy = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

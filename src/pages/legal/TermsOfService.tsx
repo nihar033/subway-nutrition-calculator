@@ -1,9 +1,17 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const TermsOfService = () => {
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>Terms of Service | Subway Nutrition Calculator</title>
+        <meta name="description" content="Read our terms of service for using the Subway Nutrition Calculator. Understand your rights and responsibilities when using our platform." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/legal/terms-of-service" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Terms of Service</h1>
@@ -99,7 +107,8 @@ const TermsOfService = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowDown, Calculator, Target, Dumbbell, TrendingDown, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Helmet } from 'react-helmet';
 import BlogPostSchema from '@/components/SEO/BlogPostSchema';
 
 const SubwayMacrosGuide = () => {
@@ -97,6 +98,10 @@ const SubwayMacrosGuide = () => {
         datePublished="2025-01-01"
         dateModified="2025-01-01"
       />
+      
+      <Helmet>
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/blog/subway-macros-guide" />
+      </Helmet>
       
       {/* Header */}
       <div className="bg-gradient-to-r from-subway-green to-subway-yellow text-white py-16">

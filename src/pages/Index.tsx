@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Hero from '@/components/home/Hero';
 import FAQ from '@/components/home/FAQ';
 import CalculatorForm from '@/components/calculator/CalculatorForm';
@@ -35,6 +36,10 @@ const Index = () => {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/" />
+      </Helmet>
+      
       <SmoothScroll />
       
       {/* SEO Schema */}

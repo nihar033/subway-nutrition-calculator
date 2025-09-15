@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Card, CardContent } from '@/components/ui/card';
 import { Search, Filter, Heart, FileText, Download, ChevronDown, AlertTriangle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -95,7 +96,14 @@ const NutritionDatabase = () => {
   const uniqueCategories = Array.from(new Set(fullMenuData.map(item => item.category)));
 
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>Subway Nutrition Database | Complete Menu Nutrition Information</title>
+        <meta name="description" content="Browse our comprehensive database of Subway menu items with detailed nutrition information. Search, filter, and compare calories, protein, carbs, and more." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/nutrition-database" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom mx-auto px-4 max-w-7xl">
         {/* Hero Section */}
         <div className="mb-12 text-center">
@@ -230,7 +238,8 @@ const NutritionDatabase = () => {
           </TabsContent>
         </Tabs>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -1,11 +1,19 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calculator, Heart, Book, Award, Clock, ShieldCheck } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>About Subway Smart Eats Guide | Your Nutrition Calculator Partner</title>
+        <meta name="description" content="Learn about our mission to help you make informed nutrition choices at Subway. Discover how our calculator works and why you can trust our nutrition data." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/about" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom">
         {/* Hero Section */}
         <div className="mb-12 text-center">
@@ -136,7 +144,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

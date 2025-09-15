@@ -197,6 +197,7 @@ const SubwayMenuPrices = () => {
         <title>Complete Subway Menu with Prices 2025 | All Items & Calories</title>
         <meta name="description" content="Complete Subway menu with prices for 2025. Find prices for all sandwiches, wraps, bowls, breakfast items, desserts, and drinks. Updated with calories and current pricing." />
         <meta name="keywords" content="subway menu prices, subway prices 2025, subway menu with calories, subway sandwich prices, subway wrap prices" />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/blog/subway-menu-prices" />
         <script type="application/ld+json">
           {JSON.stringify(faqSchemaData)}
         </script>

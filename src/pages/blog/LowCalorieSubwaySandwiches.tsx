@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowDown, Calculator, Utensils } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Helmet } from 'react-helmet';
 import BlogPostSchema from '@/components/SEO/BlogPostSchema';
 
 const LowCalorieSubwaySandwiches = () => {
@@ -155,6 +156,10 @@ const LowCalorieSubwaySandwiches = () => {
         datePublished="2025-01-01"
         dateModified="2025-01-01"
       />
+      
+      <Helmet>
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/blog/low-calorie-subway-sandwiches" />
+      </Helmet>
       
       {/* Header */}
       <div className="bg-gradient-to-r from-subway-green to-subway-yellow text-white py-16">

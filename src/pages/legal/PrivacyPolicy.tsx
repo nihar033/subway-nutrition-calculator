@@ -1,9 +1,17 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="py-12">
+    <>
+      <Helmet>
+        <title>Privacy Policy | Subway Nutrition Calculator</title>
+        <meta name="description" content="Read our privacy policy to understand how we collect, use, and protect your personal information when using the Subway Nutrition Calculator." />
+        <link rel="canonical" href="https://subway-nutrition-calculator.com/legal/privacy-policy" />
+      </Helmet>
+      
+      <div className="py-12">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
@@ -116,7 +124,8 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
