@@ -399,7 +399,7 @@ const Index = () => {
           </div>
           
           <p className="text-center text-gray-600 mt-8 text-lg">
-            Whether you're on a diet, counting macros, or just curious, our Subway sandwich calorie calculator is built for you.
+            Whether you're on a diet, counting macros, or just curious, our <a href="https://qdobanutritioncalculator.com/" target="_blank" rel="dofollow" className="text-gray-600 no-underline hover:underline">qdoba nutrition calculator</a> is built for you.
           </p>
         </div>
       </section>
@@ -604,7 +604,7 @@ const Index = () => {
           </div>
 
           <p className="text-center text-gray-600 mt-8 text-lg max-w-4xl mx-auto">
-            Our comprehensive Subway calories calculator updates nutrition information in real-time as you make selections, ensuring accuracy for every customization. This makes it the most reliable calorie calculator for Subway meals available online.
+            Our comprehensive <a href="https://dunkincaloriescalculator.com/" target="_blank" rel="dofollow" className="text-gray-600 no-underline hover:underline">dunkin nutrition calculator</a> updates nutrition information in real-time as you make selections, ensuring accuracy for every customization. This makes it the most reliable calorie calculator for Subway meals available online.
           </p>
         </div>
       </section>
