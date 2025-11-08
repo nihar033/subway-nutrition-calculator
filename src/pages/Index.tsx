@@ -604,7 +604,7 @@ const Index = () => {
           </div>
 
           <p className="text-center text-gray-600 mt-8 text-lg max-w-4xl mx-auto">
-            Our comprehensive Subway calories calculator updates nutrition information in real-time as you make selections, ensuring accuracy for every customization. This makes it the most reliable calorie calculator for Subway meals available online.
+            Our comprehensive <a href="https://dunkincaloriescalculator.com/" target="_blank" style="text-decoration: none;">dunkin nutrition calculator</a> updates nutrition information in real-time as you make selections, ensuring accuracy for every customization. This makes it the most reliable calorie calculator for Subway meals available online.
           </p>
         </div>
       </section>
