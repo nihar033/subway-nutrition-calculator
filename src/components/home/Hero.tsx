@@ -27,9 +27,9 @@ const Hero = () => {
               <a href="https://subwaynutritioncalculator.net/" target="_blank" rel="dofollow">
                 <Button 
                   size="lg" 
-                  className="text-white bg-subway-green hover:bg-subway-green/90 transition-colors"
+                  className="text-white bg-subway-green hover:bg-subway-green/90 transition-colors w-full sm:w-auto"
                 >
-                  Subway nutrition calculator <ArrowRight className="ml-2 h-5 w-5" />
+                  Try Our Calculator <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </a>
               <Link to="/nutrition-database">
