@@ -806,7 +806,11 @@ const Index = () => {
               {
                 icon: '📅',
                 title: 'Daily Meal Planning',
-                description: 'Use our versatile Subway sandwich calorie calculator to plan balanced meals that fit your daily nutrition goals. Whether you\'re aiming for 1,200 calories or 2,500 calories per day, create Subway meals that complement your overall diet plan.'
+                description: (
+                  <>
+                    Use our versatile <a href="https://starbucks-nutrition-calculator.com/" target="_blank" rel="dofollow" className="text-gray-600">Starbucks calorie calculator</a> to plan balanced meals that fit your daily nutrition goals. Whether you're aiming for 1,200 calories or 2,500 calories per day, create Subway meals that complement your overall diet plan.
+                  </>
+                )
               },
               {
                 icon: '📝',
