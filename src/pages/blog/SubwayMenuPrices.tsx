@@ -517,9 +517,9 @@ const SubwayMenuPrices = () => {
 
             <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold mb-4 text-subway-green">📈 Nutrition Counts: Know Before You Order</h3>
-              <p className="text-gray-700 mb-4">
-                Subway is popular for being one of the healthier fast food options. But peoples also love carrabbas menu are created equal. A 6-inch Turkey Breast sub has around 280 calories, while a footlong Italian B.M.T. can go over 800.
-              </p>
+            <p className="text-gray-700 mb-4">
+              Subway is popular for being one of the healthier fast food options. But peoples also love <a href="https://carrabbasmenu.com/" target="_blank" rel="dofollow" className="text-gray-700">carrabbas menu</a> are created equal. A 6-inch Turkey Breast sub has around 280 calories, while a footlong Italian B.M.T. can go over 800.
+            </p>
               <p className="text-gray-700 mb-2">
                 With{' '}
                 <Link to="/" className="text-subway-green hover:underline font-semibold">
