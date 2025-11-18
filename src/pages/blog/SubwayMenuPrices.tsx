@@ -1,154 +1,362 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-
 const SubwayMenuPrices = () => {
-  const featuredCombos = [
-    { name: "Elite Chicken & Bacon Ranch", price: "$15.28", calories: "580 Cal" },
-    { name: "The Philly", price: "$13.78", calories: "505 Cal" },
-    { name: "Subway Club", price: "$14.78", calories: "500 Cal" },
-    { name: "All-American Club", price: "$14.28", calories: "540 Cal" },
-    { name: "The Hotshot Italiano", price: "$12.28", calories: "630 Cal" },
-    { name: "The Ultimate B.M.T.", price: "$12.78", calories: "560 Cal" },
-    { name: "Titan Turkey", price: "$12.68", calories: "490 Cal" },
-    { name: "Home Run Ham", price: "$12.18", calories: "510 Cal" },
-    { name: "Honey Mustard BBQ Chicken", price: "$13.78", calories: "510 Cal" },
-    { name: "The Boss", price: "$14.58", calories: "690 Cal" },
-    { name: "Spicy Nacho Chicken", price: "$13.78", calories: "440 Cal" },
-    { name: "Cheesy Garlic Steak", price: "$13.78", calories: "510 Cal" }
-  ];
-
-  const classicSandwiches = [
-    { name: "Black Forest Ham", price: "$5.99", calories: "320 Cal" },
-    { name: "B.L.T.", price: "$5.99", calories: "370 Cal" },
-    { name: "Cold Cut Combo", price: "$5.99", calories: "370 Cal" },
-    { name: "Grilled Chicken", price: "$6.99", calories: "330 Cal" },
-    { name: "Meatball Marinara", price: "$6.99", calories: "520 Cal" },
-    { name: "Oven-Roasted Turkey", price: "$5.99", calories: "310 Cal" },
-    { name: "Pizza Sub", price: "$4.99", calories: "490 Cal" },
-    { name: "Oven-Roasted Turkey & Ham", price: "$5.99", calories: "310 Cal" },
-    { name: "Rotisserie-Style Chicken", price: "$6.99", calories: "350 Cal" },
-    { name: "Roast Beef", price: "$6.99", calories: "350 Cal" },
-    { name: "Steak & Cheese", price: "$6.99", calories: "370 Cal" },
-    { name: "Tuna", price: "$5.99", calories: "510 Cal" },
-    { name: "Veggie Delite", price: "$5.99", calories: "220 Cal" }
-  ];
-
-  const sidekicks = [
-    { name: "Cinnabon Footlong Churro", price: "$2.99", calories: "190 Cal" },
-    { name: "Auntie Anne's Footlong Pretzel", price: "$3.99", calories: "330 Cal" },
-    { name: "Pepperoni & Cheese Dipper", price: "$3.00", calories: "680 Cal" },
-    { name: "Subway Footlong Cookie", price: "$5.99", calories: "1330 Cal" },
-    { name: "Chicken & Cheese Dipper", price: "$3.00", calories: "580 Cal" },
-    { name: "Double Cheese Dipper", price: "$3.00", calories: "710 Cal" }
-  ];
-
-  const noBreadyBowls = [
-    { name: "Black Forest Ham", price: "$8.99", calories: "170 Cal" },
-    { name: "B.L.T.", price: "$8.99", calories: "360 Cal" },
-    { name: "Cold Cut Combo", price: "$7.99", calories: "260 Cal" },
-    { name: "Grilled Chicken", price: "$9.99", calories: "200 Cal" },
-    { name: "Meatball Marinara", price: "$8.99", calories: "540 Cal" },
-    { name: "Oven Roasted Turkey", price: "$8.99", calories: "150 Cal" },
-    { name: "Oven Roasted Turkey & Ham", price: "$8.99", calories: "160 Cal" },
-    { name: "Roast Beef", price: "$10.99", calories: "230 Cal" },
-    { name: "Rotisserie-Style Chicken", price: "$9.99", calories: "230 Cal" },
-    { name: "Steak & Cheese", price: "$12.98", calories: "380 Cal" },
-    { name: "Tuna", price: "$11.98", calories: "550 Cal" }
-  ];
-
-  const wraps = [
-    { name: "Honey Mustard BBQ Chicken", price: "$10.99", calories: "680 Cal" },
-    { name: "Cheesy Garlic Steak", price: "$10.99", calories: "700 Cal" },
-    { name: "Spicy Nacho Chicken", price: "$10.99", calories: "610 Cal" },
-    { name: "Elite Chicken & Bacon Ranch", price: "$11.99", calories: "830 Cal" },
-    { name: "All-American Club", price: "$11.99", calories: "760 Cal" },
-    { name: "The Great Garlic", price: "$11.99", calories: "830 Cal" },
-    { name: "Rotisserie-Style Chicken", price: "$13.99", calories: "490 Cal" },
-    { name: "Oven Roasted Turkey", price: "$12.99", calories: "410 Cal" },
-    { name: "Roast Beef", price: "$14.99", calories: "480 Cal" },
-    { name: "Grilled Chicken", price: "$12.79", calories: "460 Cal" }
-  ];
-
-  const breakfast = [
-    { name: "Bacon, Egg & Cheese", price: "$8.99", calories: "440 Cal" },
-    { name: "Bacon, Egg & Cheese Wrap", price: "$12.99", calories: "850 Cal" },
-    { name: "Black Forest Ham, Egg & Cheese", price: "$8.99", calories: "400 Cal" },
-    { name: "Black Forest Ham, Egg & Cheese Wrap", price: "$12.99", calories: "750 Cal" },
-    { name: "Egg & Cheese", price: "$8.49", calories: "360 Cal" },
-    { name: "Egg & Cheese Wrap", price: "$12.99", calories: "690 Cal" },
-    { name: "Steak, Egg & Cheese", price: "$9.99", calories: "430 Cal" },
-    { name: "Steak, Egg & Cheese Wrap", price: "$12.99", calories: "800 Cal" }
-  ];
-
-  const desserts = [
-    { name: "Cinnabon Footlong Churro", price: "$2.99", calories: "190 Cal" },
-    { name: "Subway Footlong Cookie", price: "$5.99", calories: "1330 Cal" },
-    { name: "6 Pack Cookie Box", price: "$4.99", calories: "1260 Cal" },
-    { name: "12 Pack Cookie Box", price: "$9.99", calories: "2520 Cal" },
-    { name: "Double Chocolate Cookie", price: "$1.29", calories: "210 Cal" },
-    { name: "Chocolate Chip Cookie", price: "$1.29", calories: "210 Cal" },
-    { name: "Oatmeal Raisin Cookie", price: "$1.29", calories: "200 Cal" },
-    { name: "White Chip Macadamia Nut Cookie", price: "$1.29", calories: "220 Cal" },
-    { name: "Raspberry Cheesecake Cookie", price: "$1.29", calories: "210 Cal" }
-  ];
-
-  const drinks = [
-    { name: "Coca-Cola Classic (Bottled)", price: "$2.99", calories: "240 Cal" },
-    { name: "Dasani Water", price: "$2.99", calories: "0 Cal" },
-    { name: "Gatorade Cool Blue", price: "$2.99", calories: "140 Cal" },
-    { name: "Simply Orange", price: "$2.99", calories: "160 Cal" },
-    { name: "Sprite (Bottled)", price: "$3.29", calories: "230 Cal" },
-    { name: "Vitamin Water XXX", price: "$3.29", calories: "80 Cal" },
-    { name: "1% Low Fat Milk", price: "$2.79", calories: "110 Cal" },
-    { name: "Diet Coke (Fountain)", price: "$3.49", calories: "0 Cal" },
-    { name: "Sprite (Fountain)", price: "$3.49", calories: "340 Cal" },
-    { name: "Coca-Cola Classic (Fountain)", price: "$3.49", calories: "370 Cal" }
-  ];
-
-  const faqData = [
-    {
-      question: "What is the price of a footlong cookie at Subway?",
-      answer: "The Subway footlong cookie price is about $5.99, though this may vary by region. It's a sweet treat worth trying if your local store has it!"
-    },
-    {
-      question: "How can I view the Subway menu without ordering?",
-      answer: "Visit subway-nutrition-calculator.com to explore the full Subway menu without needing to place an order. It's simple, fast, and doesn't require creating an account."
-    },
-    {
-      question: "Does Subway have a secret menu?",
-      answer: "Yes, there are unofficial secret menu items like the Pizza Sub and 'Old Cut' style. Some stores still honor these requests!"
-    },
-    {
-      question: "Where can I find the Subway menu with prices?",
-      answer: "Use our platform at subway-nutrition-calculator.com to see updated Subway menu and prices in your region."
-    },
-    {
-      question: "How do I check Subway nutrition before visiting?",
-      answer: "Easily customize and calculate your sandwich's nutritional value at subway-nutrition-calculator.com."
-    },
-    {
-      question: "Can I download a Subway menu PDF?",
-      answer: "Yes, many Subway regions offer downloadable PDFs. Or use our website for an interactive, mobile-friendly experience."
-    },
-    {
-      question: "What are all the toppings I can add to my Subway sandwich?",
-      answer: "You can choose from dozens of Subway menu toppings, including meats, cheeses, veggies, and sauces."
-    },
-    {
-      question: "How many calories are in a Subway sub?",
-      answer: "That depends on your build! A typical 6-inch sub ranges from 250 to 450 calories. Visit subway-nutrition-calculator.com for a breakdown."
-    },
-    {
-      question: "Are there healthy options at Subway?",
-      answer: "Absolutely. Choose lean proteins, load up on veggies, and go easy on sauces. Use our calculator for smart choices."
-    }
-  ];
-
+  const featuredCombos = [{
+    name: "Elite Chicken & Bacon Ranch",
+    price: "$15.28",
+    calories: "580 Cal"
+  }, {
+    name: "The Philly",
+    price: "$13.78",
+    calories: "505 Cal"
+  }, {
+    name: "Subway Club",
+    price: "$14.78",
+    calories: "500 Cal"
+  }, {
+    name: "All-American Club",
+    price: "$14.28",
+    calories: "540 Cal"
+  }, {
+    name: "The Hotshot Italiano",
+    price: "$12.28",
+    calories: "630 Cal"
+  }, {
+    name: "The Ultimate B.M.T.",
+    price: "$12.78",
+    calories: "560 Cal"
+  }, {
+    name: "Titan Turkey",
+    price: "$12.68",
+    calories: "490 Cal"
+  }, {
+    name: "Home Run Ham",
+    price: "$12.18",
+    calories: "510 Cal"
+  }, {
+    name: "Honey Mustard BBQ Chicken",
+    price: "$13.78",
+    calories: "510 Cal"
+  }, {
+    name: "The Boss",
+    price: "$14.58",
+    calories: "690 Cal"
+  }, {
+    name: "Spicy Nacho Chicken",
+    price: "$13.78",
+    calories: "440 Cal"
+  }, {
+    name: "Cheesy Garlic Steak",
+    price: "$13.78",
+    calories: "510 Cal"
+  }];
+  const classicSandwiches = [{
+    name: "Black Forest Ham",
+    price: "$5.99",
+    calories: "320 Cal"
+  }, {
+    name: "B.L.T.",
+    price: "$5.99",
+    calories: "370 Cal"
+  }, {
+    name: "Cold Cut Combo",
+    price: "$5.99",
+    calories: "370 Cal"
+  }, {
+    name: "Grilled Chicken",
+    price: "$6.99",
+    calories: "330 Cal"
+  }, {
+    name: "Meatball Marinara",
+    price: "$6.99",
+    calories: "520 Cal"
+  }, {
+    name: "Oven-Roasted Turkey",
+    price: "$5.99",
+    calories: "310 Cal"
+  }, {
+    name: "Pizza Sub",
+    price: "$4.99",
+    calories: "490 Cal"
+  }, {
+    name: "Oven-Roasted Turkey & Ham",
+    price: "$5.99",
+    calories: "310 Cal"
+  }, {
+    name: "Rotisserie-Style Chicken",
+    price: "$6.99",
+    calories: "350 Cal"
+  }, {
+    name: "Roast Beef",
+    price: "$6.99",
+    calories: "350 Cal"
+  }, {
+    name: "Steak & Cheese",
+    price: "$6.99",
+    calories: "370 Cal"
+  }, {
+    name: "Tuna",
+    price: "$5.99",
+    calories: "510 Cal"
+  }, {
+    name: "Veggie Delite",
+    price: "$5.99",
+    calories: "220 Cal"
+  }];
+  const sidekicks = [{
+    name: "Cinnabon Footlong Churro",
+    price: "$2.99",
+    calories: "190 Cal"
+  }, {
+    name: "Auntie Anne's Footlong Pretzel",
+    price: "$3.99",
+    calories: "330 Cal"
+  }, {
+    name: "Pepperoni & Cheese Dipper",
+    price: "$3.00",
+    calories: "680 Cal"
+  }, {
+    name: "Subway Footlong Cookie",
+    price: "$5.99",
+    calories: "1330 Cal"
+  }, {
+    name: "Chicken & Cheese Dipper",
+    price: "$3.00",
+    calories: "580 Cal"
+  }, {
+    name: "Double Cheese Dipper",
+    price: "$3.00",
+    calories: "710 Cal"
+  }];
+  const noBreadyBowls = [{
+    name: "Black Forest Ham",
+    price: "$8.99",
+    calories: "170 Cal"
+  }, {
+    name: "B.L.T.",
+    price: "$8.99",
+    calories: "360 Cal"
+  }, {
+    name: "Cold Cut Combo",
+    price: "$7.99",
+    calories: "260 Cal"
+  }, {
+    name: "Grilled Chicken",
+    price: "$9.99",
+    calories: "200 Cal"
+  }, {
+    name: "Meatball Marinara",
+    price: "$8.99",
+    calories: "540 Cal"
+  }, {
+    name: "Oven Roasted Turkey",
+    price: "$8.99",
+    calories: "150 Cal"
+  }, {
+    name: "Oven Roasted Turkey & Ham",
+    price: "$8.99",
+    calories: "160 Cal"
+  }, {
+    name: "Roast Beef",
+    price: "$10.99",
+    calories: "230 Cal"
+  }, {
+    name: "Rotisserie-Style Chicken",
+    price: "$9.99",
+    calories: "230 Cal"
+  }, {
+    name: "Steak & Cheese",
+    price: "$12.98",
+    calories: "380 Cal"
+  }, {
+    name: "Tuna",
+    price: "$11.98",
+    calories: "550 Cal"
+  }];
+  const wraps = [{
+    name: "Honey Mustard BBQ Chicken",
+    price: "$10.99",
+    calories: "680 Cal"
+  }, {
+    name: "Cheesy Garlic Steak",
+    price: "$10.99",
+    calories: "700 Cal"
+  }, {
+    name: "Spicy Nacho Chicken",
+    price: "$10.99",
+    calories: "610 Cal"
+  }, {
+    name: "Elite Chicken & Bacon Ranch",
+    price: "$11.99",
+    calories: "830 Cal"
+  }, {
+    name: "All-American Club",
+    price: "$11.99",
+    calories: "760 Cal"
+  }, {
+    name: "The Great Garlic",
+    price: "$11.99",
+    calories: "830 Cal"
+  }, {
+    name: "Rotisserie-Style Chicken",
+    price: "$13.99",
+    calories: "490 Cal"
+  }, {
+    name: "Oven Roasted Turkey",
+    price: "$12.99",
+    calories: "410 Cal"
+  }, {
+    name: "Roast Beef",
+    price: "$14.99",
+    calories: "480 Cal"
+  }, {
+    name: "Grilled Chicken",
+    price: "$12.79",
+    calories: "460 Cal"
+  }];
+  const breakfast = [{
+    name: "Bacon, Egg & Cheese",
+    price: "$8.99",
+    calories: "440 Cal"
+  }, {
+    name: "Bacon, Egg & Cheese Wrap",
+    price: "$12.99",
+    calories: "850 Cal"
+  }, {
+    name: "Black Forest Ham, Egg & Cheese",
+    price: "$8.99",
+    calories: "400 Cal"
+  }, {
+    name: "Black Forest Ham, Egg & Cheese Wrap",
+    price: "$12.99",
+    calories: "750 Cal"
+  }, {
+    name: "Egg & Cheese",
+    price: "$8.49",
+    calories: "360 Cal"
+  }, {
+    name: "Egg & Cheese Wrap",
+    price: "$12.99",
+    calories: "690 Cal"
+  }, {
+    name: "Steak, Egg & Cheese",
+    price: "$9.99",
+    calories: "430 Cal"
+  }, {
+    name: "Steak, Egg & Cheese Wrap",
+    price: "$12.99",
+    calories: "800 Cal"
+  }];
+  const desserts = [{
+    name: "Cinnabon Footlong Churro",
+    price: "$2.99",
+    calories: "190 Cal"
+  }, {
+    name: "Subway Footlong Cookie",
+    price: "$5.99",
+    calories: "1330 Cal"
+  }, {
+    name: "6 Pack Cookie Box",
+    price: "$4.99",
+    calories: "1260 Cal"
+  }, {
+    name: "12 Pack Cookie Box",
+    price: "$9.99",
+    calories: "2520 Cal"
+  }, {
+    name: "Double Chocolate Cookie",
+    price: "$1.29",
+    calories: "210 Cal"
+  }, {
+    name: "Chocolate Chip Cookie",
+    price: "$1.29",
+    calories: "210 Cal"
+  }, {
+    name: "Oatmeal Raisin Cookie",
+    price: "$1.29",
+    calories: "200 Cal"
+  }, {
+    name: "White Chip Macadamia Nut Cookie",
+    price: "$1.29",
+    calories: "220 Cal"
+  }, {
+    name: "Raspberry Cheesecake Cookie",
+    price: "$1.29",
+    calories: "210 Cal"
+  }];
+  const drinks = [{
+    name: "Coca-Cola Classic (Bottled)",
+    price: "$2.99",
+    calories: "240 Cal"
+  }, {
+    name: "Dasani Water",
+    price: "$2.99",
+    calories: "0 Cal"
+  }, {
+    name: "Gatorade Cool Blue",
+    price: "$2.99",
+    calories: "140 Cal"
+  }, {
+    name: "Simply Orange",
+    price: "$2.99",
+    calories: "160 Cal"
+  }, {
+    name: "Sprite (Bottled)",
+    price: "$3.29",
+    calories: "230 Cal"
+  }, {
+    name: "Vitamin Water XXX",
+    price: "$3.29",
+    calories: "80 Cal"
+  }, {
+    name: "1% Low Fat Milk",
+    price: "$2.79",
+    calories: "110 Cal"
+  }, {
+    name: "Diet Coke (Fountain)",
+    price: "$3.49",
+    calories: "0 Cal"
+  }, {
+    name: "Sprite (Fountain)",
+    price: "$3.49",
+    calories: "340 Cal"
+  }, {
+    name: "Coca-Cola Classic (Fountain)",
+    price: "$3.49",
+    calories: "370 Cal"
+  }];
+  const faqData = [{
+    question: "What is the price of a footlong cookie at Subway?",
+    answer: "The Subway footlong cookie price is about $5.99, though this may vary by region. It's a sweet treat worth trying if your local store has it!"
+  }, {
+    question: "How can I view the Subway menu without ordering?",
+    answer: "Visit subway-nutrition-calculator.com to explore the full Subway menu without needing to place an order. It's simple, fast, and doesn't require creating an account."
+  }, {
+    question: "Does Subway have a secret menu?",
+    answer: "Yes, there are unofficial secret menu items like the Pizza Sub and 'Old Cut' style. Some stores still honor these requests!"
+  }, {
+    question: "Where can I find the Subway menu with prices?",
+    answer: "Use our platform at subway-nutrition-calculator.com to see updated Subway menu and prices in your region."
+  }, {
+    question: "How do I check Subway nutrition before visiting?",
+    answer: "Easily customize and calculate your sandwich's nutritional value at subway-nutrition-calculator.com."
+  }, {
+    question: "Can I download a Subway menu PDF?",
+    answer: "Yes, many Subway regions offer downloadable PDFs. Or use our website for an interactive, mobile-friendly experience."
+  }, {
+    question: "What are all the toppings I can add to my Subway sandwich?",
+    answer: "You can choose from dozens of Subway menu toppings, including meats, cheeses, veggies, and sauces."
+  }, {
+    question: "How many calories are in a Subway sub?",
+    answer: "That depends on your build! A typical 6-inch sub ranges from 250 to 450 calories. Visit subway-nutrition-calculator.com for a breakdown."
+  }, {
+    question: "Are there healthy options at Subway?",
+    answer: "Absolutely. Choose lean proteins, load up on veggies, and go easy on sauces. Use our calculator for smart choices."
+  }];
   const faqSchemaData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -161,9 +369,19 @@ const SubwayMenuPrices = () => {
       }
     }))
   };
-
-  const MenuSection = ({ title, items, emoji }: { title: string; items: { name: string; price: string; calories: string; }[]; emoji: string }) => (
-    <section className="mb-12">
+  const MenuSection = ({
+    title,
+    items,
+    emoji
+  }: {
+    title: string;
+    items: {
+      name: string;
+      price: string;
+      calories: string;
+    }[];
+    emoji: string;
+  }) => <section className="mb-12">
       <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
         <span>{emoji}</span>
         {title}
@@ -178,21 +396,16 @@ const SubwayMenuPrices = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {items.map((item, index) => (
-              <TableRow key={index}>
+            {items.map((item, index) => <TableRow key={index}>
                 <TableCell className="font-medium">{item.name}</TableCell>
                 <TableCell className="text-subway-green font-semibold">{item.price}</TableCell>
                 <TableCell className="text-gray-600">{item.calories}</TableCell>
-              </TableRow>
-            ))}
+              </TableRow>)}
           </TableBody>
         </Table>
       </Card>
-    </section>
-  );
-
-  return (
-    <>
+    </section>;
+  return <>
       <Helmet>
         <title>Complete Subway Menu with Prices 2025 | All Items & Calories</title>
         <meta name="description" content="Complete Subway menu with prices for 2025. Find prices for all sandwiches, wraps, bowls, breakfast items, desserts, and drinks. Updated with calories and current pricing." />
@@ -206,10 +419,7 @@ const SubwayMenuPrices = () => {
       <div className="container-custom py-12">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center text-subway-green hover:text-subway-green/80 transition-colors mb-4"
-            >
+            <Link to="/blog" className="inline-flex items-center text-subway-green hover:text-subway-green/80 transition-colors mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
@@ -308,7 +518,7 @@ const SubwayMenuPrices = () => {
             <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold mb-4 text-subway-green">📈 Nutrition Counts: Know Before You Order</h3>
               <p className="text-gray-700 mb-4">
-                Subway is popular for being one of the healthier fast food options. But not all sandwiches are created equal. A 6-inch Turkey Breast sub has around 280 calories, while a footlong Italian B.M.T. can go over 800.
+                Subway is popular for being one of the healthier fast food options. But peoples also love carrabbas menu are created equal. A 6-inch Turkey Breast sub has around 280 calories, while a footlong Italian B.M.T. can go over 800.
               </p>
               <p className="text-gray-700 mb-2">
                 With{' '}
@@ -477,8 +687,6 @@ const SubwayMenuPrices = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default SubwayMenuPrices;
